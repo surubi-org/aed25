@@ -1,4 +1,13 @@
-site_name: Plantilla Surubí
+site_name: AED Surubí
 nav:
-  - Inicio: index.md
+  - Introducciȯn: index.md
+  - Condicionales: 02-secuenciales-condicionales.md
+  - Repetitivas: 03-repetitivas.md
+  - Funciones y Procedimientos: 04-funciones-procedimientos.md
+  - Secuencias de datos: 05-secuencias-datos.md
+  - Subsecuencias: 06-subsecuencias.md
+  - Registros: 07-registros.md
+  - Archivos: 08-archivos.md
+  - Procesos con Archivos: 09-procesos-archivos.md
+  - Corte de Control: 10-corte-control.md
 theme: readthedocs
