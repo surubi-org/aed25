@@ -1,0 +1,4 @@
+site_name: Plantilla Surubí
+nav:
+  - Inicio: index.md
+theme: readthedocs
