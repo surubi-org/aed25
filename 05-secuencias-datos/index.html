@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Secuencias de datos - AED Surubí</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Secuencias de datos";
+        var mkdocs_page_input_path = "05-secuencias-datos.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AED Surubí
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introducciȯn</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02-secuenciales-condicionales/">Condicionales</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03-repetitivas/">Repetitivas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04-funciones-procedimientos/">Funciones y Procedimientos</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Secuencias de datos</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#que-es-una-secuencia-de-datos-elementales">¿Qué es una Secuencia de Datos Elementales?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#caracteristicas-clave">Características clave</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clasificaciones-principales">Clasificaciones principales</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#por-contenido">Por contenido</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#por-cantidad-de-elementos">Por cantidad de elementos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#por-pureza">Por pureza</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pseudocodigo-acciones-predefinidas">Pseudocódigo: Acciones predefinidas</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#declaracion-tipica-en-el-ambiente">Declaración típica en el Ambiente</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#esquemas-de-recorrido-patrones">Esquemas de recorrido (patrones)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#esquema-no1-pre-test-impura-con-marca">Esquema Nº1 — Pre-test (impura con marca)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#esquema-no2-post-test-pura-definida-por-marca-final">Esquema Nº2 — Post-test (pura definida por marca final)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#esquema-no3-definida-por-cantidad-contador-para">Esquema Nº3 — Definida por cantidad (contador PARA)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ejemplos-practicos-de-tratamiento">Ejemplos prácticos de tratamiento</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#copiar-de-una-secuencia-a-otra-indefinida-impura">Copiar de una secuencia a otra (indefinida impura)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#contar-mayores-que-un-umbral-definida-por-cantidad">Contar mayores que un umbral (definida por cantidad)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#buenas-practicas">Buenas prácticas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resumen">Resumen</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06-subsecuencias/">Subsecuencias</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07-registros/">Registros</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08-archivos/">Archivos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09-procesos-archivos/">Procesos con Archivos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10-corte-control/">Corte de Control</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AED Surubí</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Secuencias de datos</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="secuencias-de-datos-elementales">Secuencias de Datos Elementales</h1>
+<p>Esta página introduce el concepto de <strong>secuencias de datos elementales</strong>, sus características, clasificación y el <strong>pseudocódigo estándar</strong> para su tratamiento (acciones predefinidas <code>ARR</code>, <code>AVZ</code>, <code>CREAR</code>, <code>ESCRIBIR</code>, <code>CERRAR</code>).</p>
+<hr />
+<h2 id="que-es-una-secuencia-de-datos-elementales">¿Qué es una Secuencia de Datos Elementales?</h2>
+<p>Es un <strong>conjunto de datos relacionados</strong> que se almacena en <strong>memoria externa</strong> (disco, pendrive, etc.). La secuencia presenta orden y posee un <strong>primer</strong> y <strong>último</strong> elemento; además, debe estar definido un <strong>indicador de fin de secuencia</strong>.</p>
+<hr />
+<h2 id="caracteristicas-clave">Características clave</h2>
+<ul>
+<li><strong>Primer elemento</strong>: desde él se accede al resto por sucesión.</li>
+<li><strong>Relación de sucesión</strong>: cada elemento (salvo el último) precede a otro; cada elemento (salvo el primero) sucede a otro.</li>
+<li>
+<p><strong>Último elemento</strong>: toda secuencia tiene un final bien definido.</p>
+</li>
+<li>
+<p><strong>Fin de secuencia (FDS)</strong>: puede ser una <strong>marca</strong> (sentinela) o una <strong>cantidad conocida</strong> de elementos.</p>
+</li>
+</ul>
+<p><strong>Ejemplos de FDS</strong></p>
+<ul>
+<li>Numérica con marca: <code>... 1990 1994 1992 2000 1998 -1</code> (termina en <code>-1</code>).</li>
+<li>Caracteres con marca: <code>A C 2 5 6 X E A F 3 2 5 B B %</code> (termina en <code>%</code>).</li>
+<li>Definida por cantidad: "primeros 4 promedios del año".</li>
+</ul>
+<hr />
+<h2 id="clasificaciones-principales">Clasificaciones principales</h2>
+<h3 id="por-contenido">Por contenido</h3>
+<ul>
+<li><strong>Numéricas</strong> (enteros, reales)</li>
+<li><strong>De caracteres</strong> (códigos, patentes, etc.)</li>
+<li><strong>De registros</strong> (se verá en temas posteriores)</li>
+</ul>
+<h3 id="por-cantidad-de-elementos">Por cantidad de elementos</h3>
+<ul>
+<li><strong>Definidas</strong>: se conoce la cantidad (p. ej., 10 elementos).</li>
+<li><strong>Indefinidas</strong>: no se conoce la cantidad; se usa marca o condición de fin.</li>
+</ul>
+<h3 id="por-pureza">Por pureza</h3>
+<ul>
+<li><strong>Puras</strong>: todos los elementos pertenecen a la misma especie y el <strong>último</strong> se trata igual que los demás. Suelen manejarse con <strong>post-test</strong>.</li>
+<li><strong>Impuras</strong>: incluyen un <strong>elemento extraño</strong> (marca) que no se procesa; se manejan con <strong>pre-test</strong>.</li>
+</ul>
+<hr />
+<h2 id="pseudocodigo-acciones-predefinidas">Pseudocódigo: Acciones predefinidas</h2>
+<blockquote>
+<p>Estas acciones aseguran el <strong>acceso secuencial</strong> correcto a los elementos.</p>
+</blockquote>
+<ul>
+<li><code>ARR(nombre_secuencia)</code> → <strong>Arrancar</strong> el tratamiento de una secuencia existente.</li>
+<li><code>AVZ(nombre_secuencia, var)</code> → <strong>Avanzar</strong> y recuperar el <strong>siguiente elemento</strong> en <code>var</code>.</li>
+<li><code>CREAR(nombre_secuencia_salida)</code> → Inicializa una <strong>nueva secuencia vacía</strong> (solo para salida).</li>
+<li><code>ESCRIBIR(nombre_secuencia_salida, var)</code> → Agrega <code>var</code> a la <strong>secuencia de salida</strong> creada.</li>
+<li><code>CERRAR(nombre_secuencia)</code> → <strong>Finaliza</strong> el tratamiento de la secuencia (libera recursos / asegura persistencia).</li>
+</ul>
+<h3 id="declaracion-tipica-en-el-ambiente">Declaración típica en el Ambiente</h3>
+<pre><code class="language-pseudocode">ACCION Secu ES
+AMBIENTE
+   sec: Secuencia de [tipo_dato]
+   sal: Secuencia de [tipo_dato]
+   v:   [tipo_dato]
+PROCESO
+   // ...
+FINACCION
+</code></pre>
+<hr />
+<h2 id="esquemas-de-recorrido-patrones">Esquemas de recorrido (patrones)</h2>
+<h3 id="esquema-no1-pre-test-impura-con-marca">Esquema Nº1 — Pre-test (impura con marca)</h3>
+<p>Cuenta elementos <strong>antes</strong> de tratar el FDS.</p>
+<pre><code class="language-pseudocode">
+ACCION esquema_1 ES
+AMBIENTE
+  S: secuencia de caracter
+  v: caracter
+  cont: entero
+PROCESO
+  ARR(S)
+  cont := 0
+  AVZ(S, v)
+  Mientras v &lt;&gt; '#' Hacer
+     cont := cont + 1
+     AVZ(S, v)
+  FinMientras
+  ESC(&quot;Elementos en la secuencia = &quot;, cont)
+FINACCION
+
+</code></pre>
+<h3 id="esquema-no2-post-test-pura-definida-por-marca-final">Esquema Nº2 — Post-test (pura definida por marca final)</h3>
+<p>Procesa <strong>incluyendo</strong> el último elemento válido y <strong>termina</strong> al ver la marca.</p>
+<pre><code class="language-pseudocode">ACCION esquema_2 ES
+AMBIENTE
+  S: secuencia de entero
+  v, cont: entero
+PROCESO
+  ARR(S)
+  cont := 0
+  Repetir
+     AVZ(S, v)
+     cont := cont + 1
+  Hasta que v = 999
+  ESCRIBIR(cont)
+FINACCION
+</code></pre>
+<h3 id="esquema-no3-definida-por-cantidad-contador-para">Esquema Nº3 — Definida por cantidad (contador <code>PARA</code>)</h3>
+<p>Lee exactamente <strong>N</strong> elementos.</p>
+<pre><code class="language-pseudocode">ACCION esquema_3 ES
+AMBIENTE
+  S: secuencia de entero
+  v, i: entero
+PROCESO
+  ARR(S)
+  Para i := 1 Hasta 10 Hacer
+     AVZ(S, v)
+     ESC(v)
+  FinPara
+FINACCION
+</code></pre>
+<hr />
+<h2 id="ejemplos-practicos-de-tratamiento">Ejemplos prácticos de tratamiento</h2>
+<h3 id="copiar-de-una-secuencia-a-otra-indefinida-impura">Copiar de una secuencia a otra (indefinida impura)</h3>
+<pre><code class="language-pseudocode">ACCION CopiarSecuencia ES
+AMBIENTE
+  ent: Secuencia de caracter
+  sal: Secuencia de caracter
+  x: caracter
+PROCESO
+  ARR(ent)
+  CREAR(sal)
+  AVZ(ent, x)
+  Mientras x &lt;&gt; '%' Hacer
+     ESCRIBIR(sal, x)
+     AVZ(ent, x)
+  FinMientras
+  CERRAR(sal)
+FINACCION
+</code></pre>
+<h3 id="contar-mayores-que-un-umbral-definida-por-cantidad">Contar mayores que un umbral (definida por cantidad)</h3>
+<pre><code class="language-pseudocode">ACCION ContarMayores ES
+AMBIENTE
+
+  ent: Secuencia de entero
+  i, v, umbral, cuenta: entero
+PROCESO
+  ARR(ent)
+  cuenta := 0
+  umbral := 100
+  Para i := 1 Hasta 20 Hacer
+     AVZ(ent, v)
+     Si v &gt; umbral Entonces
+        cuenta := cuenta + 1
+     FinSi
+  FinPara
+  ESC(&quot;Mayores a &quot;, umbral, &quot;: &quot;, cuenta)
+FINACCION
+</code></pre>
+<hr />
+<h2 id="buenas-practicas">Buenas prácticas</h2>
+<ul>
+<li>Elegí <strong>pre-test</strong> si trabajás con <strong>marca</strong> (impura) y el elemento de fin <strong>no</strong> debe procesarse.</li>
+<li>Elegí <strong>post-test</strong> en secuencias <strong>puras</strong> para asegurar al menos una lectura y tratar por igual el último.</li>
+<li>Declarar una variable de <strong>trabajo</strong> (buffer) para <code>AVZ</code> del <strong>mismo tipo</strong> que la secuencia.</li>
+<li>Recordá <strong>cerrar</strong> secuencias de salida (<code>CERRAR</code>) para garantizar persistencia.</li>
+</ul>
+<hr />
+<h2 id="resumen">Resumen</h2>
+<ul>
+<li>Las secuencias se recorren de forma <strong>secuencial</strong> con <code>ARR</code> y <code>AVZ</code>.</li>
+<li>El <strong>fin de secuencia</strong> es imprescindible (marca o cantidad).</li>
+<li>Usá el <strong>esquema</strong> que corresponda: <em>pre-test</em> (impura), <em>post-test</em> (pura) o <em>definida</em> (contador).</li>
+<li><code>CREAR/ESCRIBIR/CERRAR</code> habilitan la <strong>generación</strong> de nuevas secuencias de salida.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../04-funciones-procedimientos/" class="btn btn-neutral float-left" title="Funciones y Procedimientos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../06-subsecuencias/" class="btn btn-neutral float-right" title="Subsecuencias">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../04-funciones-procedimientos/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../06-subsecuencias/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Repetitivas - AED Surubí</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Repetitivas";
+        var mkdocs_page_input_path = "03-repetitivas.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AED Surubí
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introducciȯn</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02-secuenciales-condicionales/">Condicionales</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Repetitivas</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#recursos-fundamentales">Recursos Fundamentales</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#contadores">Contadores</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#acumuladores">Acumuladores</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#banderas">Banderas</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#concepto-de-iteracion">Concepto de Iteración</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clasificacion-de-ciclos">Clasificación de Ciclos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ciclo-pre-test">Ciclo Pre-Test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ciclo-post-test">Ciclo Post-Test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ciclo-definido-por-contador">Ciclo Definido por Contador</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resumen">Resumen</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04-funciones-procedimientos/">Funciones y Procedimientos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05-secuencias-datos/">Secuencias de datos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06-subsecuencias/">Subsecuencias</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07-registros/">Registros</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08-archivos/">Archivos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09-procesos-archivos/">Procesos con Archivos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10-corte-control/">Corte de Control</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AED Surubí</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Repetitivas</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="estructuras-repetitivas">Estructuras Repetitivas</h1>
+<p>Este documento explica las <strong>estructuras repetitivas</strong> (o ciclos), junto con los recursos básicos necesarios: <strong>contadores, acumuladores y banderas</strong>. Se incluyen ejemplos de pseudocódigo siguiendo el estilo de documentación técnica inspirada en MDN.</p>
+<hr />
+<h2 id="recursos-fundamentales">Recursos Fundamentales</h2>
+<h3 id="contadores">Contadores</h3>
+<p>Son variables que llevan la cuenta de cuántas veces ocurre un evento. Se incrementan o decrementan en valores constantes.</p>
+<pre><code class="language-pseudocode">contador := contador + 1
+</code></pre>
+<p><strong>Ejemplo:</strong> Sensor de aforo que incrementa cada vez que entra una persona.</p>
+<hr />
+<h3 id="acumuladores">Acumuladores</h3>
+<p>Son variables que suman cantidades variables (no constantes). Sirven para almacenar totales.</p>
+<pre><code class="language-pseudocode">acumula := acumula + valor
+</code></pre>
+<p><strong>Ejemplo:</strong> Robot que acumula kilos de basura espacial recolectados.</p>
+<hr />
+<h3 id="banderas">Banderas</h3>
+<p>Son variables lógicas (booleanas) que indican si ocurrió o no un evento.</p>
+<pre><code class="language-pseudocode">bandera := V   // verdadero
+bandera := F   // falso
+</code></pre>
+<p><strong>Ejemplo:</strong> Encender o apagar luces según el horario configurado (7PM a 6AM).</p>
+<hr />
+<h2 id="concepto-de-iteracion">Concepto de Iteración</h2>
+<p>La <strong>iteración</strong> es la repetición de un conjunto de acciones bajo ciertas condiciones. Cada vuelta del ciclo se denomina <strong>bucle</strong>【16†source】.</p>
+<hr />
+<h2 id="clasificacion-de-ciclos">Clasificación de Ciclos</h2>
+<ol>
+<li>
+<p><strong>Definidos</strong>: sabemos de antemano cuántas veces se repite.</p>
+</li>
+<li>
+<p>Ejemplo: ejecutar una acción 10 veces.</p>
+</li>
+<li>
+<p><strong>Indefinidos</strong>: no sabemos la cantidad exacta de repeticiones.</p>
+</li>
+<li>
+<p>Ejemplo: pedir números hasta que se ingrese un valor negativo.</p>
+</li>
+</ol>
+<p>Los ciclos también se clasifican en <strong>Pre-Test</strong> y <strong>Post-Test</strong> según el momento en que se evalúa la condición【16†source】.</p>
+<hr />
+<h2 id="ciclo-pre-test">Ciclo Pre-Test</h2>
+<p>La condición se evalúa <strong>antes</strong> de ejecutar el bloque. Puede repetirse 0 o más veces.</p>
+<pre><code class="language-pseudocode">total := 0
+Esc(&quot;Ingrese primer número&quot;)
+Leer(num)
+
+Mientras num &gt;= 0 Hacer
+   total := total + num
+   Esc(&quot;Ingrese otro número&quot;)
+   Leer(num)
+FinMientras
+
+Esc(&quot;La suma total es&quot;, total)
+</code></pre>
+<p><strong>Ejemplo real:</strong> sumar los números ingresados en un juego hasta que el usuario escriba un valor negativo.</p>
+<hr />
+<h2 id="ciclo-post-test">Ciclo Post-Test</h2>
+<p>La condición se evalúa <strong>después</strong> de ejecutar el bloque. Garantiza al menos una ejecución.</p>
+<pre><code class="language-pseudocode">clavecorrecta := 123
+Repetir
+   Esc(&quot;Introduce la clave&quot;)
+   Leer(intento)
+Hasta que intento = clavecorrecta
+</code></pre>
+<p><strong>Ejemplo real:</strong> pedir una contraseña hasta que coincida con la correcta.</p>
+<hr />
+<h2 id="ciclo-definido-por-contador">Ciclo Definido por Contador</h2>
+<p>Se utiliza cuando se conoce de antemano la cantidad de repeticiones. Generalmente implementado con <strong>PARA</strong>.</p>
+<pre><code class="language-pseudocode">Para i := 1 Hasta 5 Hacer
+   Esc(&quot;Iteración número&quot;, i)
+FinPara
+</code></pre>
+<p><strong>Ejemplo real:</strong> mostrar un mensaje 5 veces.</p>
+<hr />
+<h2 id="resumen">Resumen</h2>
+<ul>
+<li><strong>Contadores, acumuladores y banderas</strong> son recursos básicos para construir algoritmos repetitivos.</li>
+<li>
+<p><strong>Pre-Test</strong>: condición antes del bloque (0 o más repeticiones).</p>
+</li>
+<li>
+<p><strong>Post-Test</strong>: condición después del bloque (1 o más repeticiones).</p>
+</li>
+<li><strong>Definidos por contador</strong>: número de repeticiones conocidas de antemano.</li>
+</ul>
+<p>Estas estructuras son esenciales para automatizar procesos donde la repetición es necesaria.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../02-secuenciales-condicionales/" class="btn btn-neutral float-left" title="Condicionales"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../04-funciones-procedimientos/" class="btn btn-neutral float-right" title="Funciones y Procedimientos">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../02-secuenciales-condicionales/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../04-funciones-procedimientos/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

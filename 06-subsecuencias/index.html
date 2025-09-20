@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Subsecuencias - AED Surubí</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Subsecuencias";
+        var mkdocs_page_input_path = "06-subsecuencias.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AED Surubí
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introducciȯn</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02-secuenciales-condicionales/">Condicionales</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03-repetitivas/">Repetitivas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04-funciones-procedimientos/">Funciones y Procedimientos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05-secuencias-datos/">Secuencias de datos</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Subsecuencias</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ideas-clave">Ideas clave</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#definiciones-frecuentes">Definiciones frecuentes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#subsecuencia-palabra">Subsecuencia PALABRA</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#subsecuencia-oracion">Subsecuencia ORACIÓN</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tipos-de-relacion-entre-subsecuencias">Tipos de relación entre subsecuencias</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-subsecuencias-enlazadas">1) Subsecuencias enlazadas</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-subsecuencias-jerarquicas">2) Subsecuencias jerárquicas</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#patrones-de-tratamiento">Patrones de tratamiento</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#a-palabras-en-texto-pre-test-sobre-blancos">A. Palabras en texto (pre-test sobre blancos)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#b-longitud-maxima-de-palabra">B. Longitud máxima de palabra</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#c-oraciones-en-texto-delimitador">C. Oraciones en texto (delimitador '.')</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#subsecuencias-enlazadas-bloques-de-tamano-fijo">Subsecuencias enlazadas (bloques de tamaño fijo)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#d-contar-digitos-0-en-codigos-de-4-caracteres">D. Contar dígitos '0' en códigos de 4 caracteres</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#subsecuencias-jerarquicas-anidadas">Subsecuencias jerárquicas (anidadas)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#e-texto-oraciones-palabras-promedio-de-longitud-de-palabra-por-oracion">E. Texto → Oraciones → Palabras: promedio de longitud de palabra por oración</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#buenas-practicas-y-chequeos">Buenas prácticas y chequeos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resumen">Resumen</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07-registros/">Registros</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08-archivos/">Archivos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09-procesos-archivos/">Procesos con Archivos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10-corte-control/">Corte de Control</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AED Surubí</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Subsecuencias</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="subsecuencias">Subsecuencias</h1>
+<p>En esta página se presentan los fundamentos de <strong>subsecuencias</strong> dentro de <strong>secuencias de datos elementales</strong>, su clasificación (<em>enlazadas</em> y <em>jerárquicas</em>), criterios de inicio/fin y patrones de tratamiento con pseudocódigo.</p>
+<hr />
+<h2 id="ideas-clave">Ideas clave</h2>
+<ul>
+<li>Una <strong>secuencia</strong> es un conjunto homogéneo y ordenado de elementos.</li>
+<li>Una <strong>subsecuencia</strong> es un <strong>conjunto de elementos consecutivos</strong> dentro de una secuencia principal, definido por <strong>reglas de inicio y fin</strong>.</li>
+<li>Las subsecuencias <strong>heredan</strong> las propiedades de la secuencia de la que forman parte (orden, fin, homogeneidad del tipo de dato, etc.).</li>
+</ul>
+<hr />
+<h2 id="definiciones-frecuentes">Definiciones frecuentes</h2>
+<h3 id="subsecuencia-palabra">Subsecuencia <em>PALABRA</em></h3>
+<p>Subconjunto de elementos <strong>consecutivos</strong> de una <strong>secuencia de caracteres</strong> que:</p>
+<ul>
+<li><strong>empieza</strong> en un carácter <strong>distinto de espacio</strong> (<code>' '</code>), y</li>
+<li><strong>termina</strong> en un <strong>espacio</strong> o en una <strong>marca</strong> definida por el problema (p. ej., final de palabra, fin de secuencia, etc.).</li>
+</ul>
+<h3 id="subsecuencia-oracion">Subsecuencia <em>ORACIÓN</em></h3>
+<p>Subconjunto de elementos <strong>consecutivos</strong> de una <strong>secuencia de caracteres</strong> que:</p>
+<ul>
+<li><strong>empieza</strong> en un carácter <strong>distinto de espacio</strong> (<code>' '</code>), y</li>
+<li><strong>termina</strong> en un delimitador <strong>final de oración</strong> (p. ej., <code>'.'</code>) u otra marca especificada.</li>
+</ul>
+<blockquote>
+<p><strong>Palabra con contenido</strong>: cadena de <strong>caracteres no blancos</strong> que finaliza en <code>'.'</code> o en <strong>blanco</strong>.</p>
+<p><strong>Palabra vacía</strong>: cadena de <strong>blancos consecutivos</strong> que finaliza en un carácter <strong>no blanco</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="tipos-de-relacion-entre-subsecuencias">Tipos de relación entre subsecuencias</h2>
+<h3 id="1-subsecuencias-enlazadas">1) Subsecuencias <em>enlazadas</em></h3>
+<ul>
+<li>Las subsecuencias <strong>se encadenan</strong> una detrás de otra.</li>
+<li>Al <strong>terminar</strong> una subsecuencia, <strong>comienza</strong> la siguiente.</li>
+<li>Ejemplo clásico: secuencia de caracteres que almacena <strong>códigos de 4 dígitos</strong> en serie (<code>1 3 2 5  4 8 9 0  ...</code>). Cada bloque de 4 conforma <strong>una subsecuencia</strong>.</li>
+</ul>
+<h3 id="2-subsecuencias-jerarquicas">2) Subsecuencias <em>jerárquicas</em></h3>
+<ul>
+<li>Las subsecuencias se <strong>incluyen</strong> unas en otras por <strong>niveles</strong>.</li>
+<li>No hay continuidad obligatoria entre subsecuencias del mismo nivel.</li>
+<li>Ejemplo clásico: <strong>Texto → Párrafos → Oraciones → Palabras</strong>.</li>
+</ul>
+<hr />
+<h2 id="patrones-de-tratamiento">Patrones de tratamiento</h2>
+<p>A continuación se muestran <strong>esquemas de recorrido</strong> reutilizables. Se asume el conjunto de acciones para secuencias: <code>ARR</code>, <code>AVZ</code>, <code>CREAR</code>, <code>ESCRIBIR</code>, <code>CERRAR</code>.</p>
+<blockquote>
+<p><strong>Convención</strong>: <code>S</code> es una <strong>secuencia de caracteres</strong> y <code>c</code> una variable <strong>carácter</strong>.</p>
+</blockquote>
+<h3 id="a-palabras-en-texto-pre-test-sobre-blancos">A. Palabras en texto (pre-test sobre blancos)</h3>
+<p>Ignora <strong>palabras vacías</strong> (múltiples espacios). Cuenta <strong>palabras con contenido</strong>.</p>
+<pre><code class="language-pseudocode">
+ACCION ContarPalabras ES
+AMBIENTE
+
+  S: Secuencia de caracter
+  c: caracter
+  en_palabra: logico
+  total: entero
+PROCESO
+  ARR(S)
+  AVZ(S, c)
+  en_palabra := F
+  total := 0
+  Mientras c &lt;&gt; '#' Hacer           // '#' = fin de secuencia (ejemplo de marca)
+    Si c &lt;&gt; ' ' y no en_palabra Entonces
+      en_palabra := V               // inicia palabra con contenido
+      total := total + 1
+    FinSi
+    Si c = ' ' y en_palabra Entonces
+      en_palabra := F               // cerró la palabra al ver blanco
+    FinSi
+    AVZ(S, c)
+  FinMientras
+  ESC(&quot;Palabras con contenido:&quot;, total)
+FINACCION
+</code></pre>
+<h3 id="b-longitud-maxima-de-palabra">B. Longitud máxima de palabra</h3>
+<p>Registra la longitud de la <strong>palabra más larga</strong>.</p>
+<pre><code class="language-pseudocode">ACCION LongitudMaxPalabra ES
+AMBIENTE
+  S: Secuencia de caracter
+  c: caracter
+  en_palabra: logico
+  long_act, long_max: entero
+PROCESO
+  ARR(S)
+  AVZ(S, c)
+  en_palabra := F
+  long_act := 0
+  long_max := 0
+  Mientras c &lt;&gt; '#' Hacer
+    Si c &lt;&gt; ' ' Entonces
+      Si no en_palabra Entonces
+        en_palabra := V
+        long_act := 0
+      FinSi
+      long_act := long_act + 1
+    Contrario
+      Si en_palabra Entonces
+        en_palabra := F
+        Si long_act &gt; long_max Entonces
+          long_max := long_act
+        FinSi
+      FinSi
+    FinSi
+    AVZ(S, c)
+  FinMientras
+  // cierre si terminó sin blanco final
+  Si en_palabra y long_act &gt; long_max Entonces
+     long_max := long_act
+  FinSi
+  ESC(&quot;Longitud máxima:&quot;, long_max)
+FINACCION
+</code></pre>
+<h3 id="c-oraciones-en-texto-delimitador">C. Oraciones en texto (delimitador '.')</h3>
+<p>Cuenta cuántas <strong>oraciones</strong> hay en el texto.</p>
+<pre><code class="language-pseudocode">ACCION ContarOraciones ES
+AMBIENTE
+  S: Secuencia de caracter
+  c: caracter
+  en_contenido: logico
+  oraciones: entero
+PROCESO
+  ARR(S)
+  AVZ(S, c)
+  en_contenido := F
+  oraciones := 0
+
+  Mientras c &lt;&gt; '#' Hacer
+    Si c &lt;&gt; ' ' y c &lt;&gt; '.' Entonces
+      en_contenido := V
+    FinSi
+    Si c = '.' y en_contenido Entonces
+      oraciones := oraciones + 1    // cierre de oración con contenido
+      en_contenido := F
+    FinSi
+    AVZ(S, c)
+  FinMientras
+  ESC(&quot;Cantidad de oraciones:&quot;, oraciones)
+FINACCION
+</code></pre>
+<hr />
+<h2 id="subsecuencias-enlazadas-bloques-de-tamano-fijo">Subsecuencias enlazadas (bloques de tamaño fijo)</h2>
+<h3 id="d-contar-digitos-0-en-codigos-de-4-caracteres">D. Contar dígitos '0' en códigos de 4 caracteres</h3>
+<p>Suponga <code>S</code> contiene <strong>códigos de 4 caracteres</strong> consecutivos; por cada bloque (subsecuencia) contar los ceros y acumular total general.</p>
+<pre><code class="language-pseudocode">ACCION CerosEnCodigos4 ES
+AMBIENTE
+  S: Secuencia de caracter
+  c: caracter
+  i, ceros_cod, ceros_total: entero
+PROCESO
+  ARR(S)
+
+  ceros_total := 0
+  Repetir
+    ceros_cod := 0
+    Para i := 1 Hasta 4 Hacer
+      AVZ(S, c)
+      Si c = '#' Entonces         // marca: fin de secuencia
+         // fin abrupto: salir de la rutina
+         ESC(&quot;Total ceros:&quot;, ceros_total)
+         regresar
+      FinSi
+      Si c = '0' Entonces
+         ceros_cod := ceros_cod + 1
+      FinSi
+    FinPara
+    // tratar el bloque completo
+    ESC(&quot;Ceros en código:&quot;, ceros_cod)
+    ceros_total := ceros_total + ceros_cod
+  Hasta que falso                   // continúa hasta ver '#'
+FINACCION
+</code></pre>
+<blockquote>
+<p>Si preferís un fin <strong>controlado</strong>, reemplazá la condición de corte por lectura anticipada del primer carácter del bloque y verificá <code>'#'</code> antes de entrar al <code>Para</code>.</p>
+</blockquote>
+<hr />
+<h2 id="subsecuencias-jerarquicas-anidadas">Subsecuencias jerárquicas (anidadas)</h2>
+<h3 id="e-texto-oraciones-palabras-promedio-de-longitud-de-palabra-por-oracion">E. Texto → Oraciones → Palabras: promedio de longitud de palabra por oración</h3>
+<p>Calcula, por cada <strong>oración</strong>, el <strong>promedio</strong> de longitudes de sus <strong>palabras con contenido</strong>; al final emite el <strong>promedio global</strong>.</p>
+<pre><code class="language-pseudocode">ACCION PromedioLongitudesPorOracion ES
+AMBIENTE
+  S: Secuencia de caracter
+  c: caracter
+  // nivel palabra
+  en_pal: logico
+  long_pal: entero
+  // nivel oración
+  suma_long, cant_pal, cant_orac: entero
+  prom_orac, prom_global: real
+PROCESO
+
+  ARR(S)
+  AVZ(S, c)
+  // inicializaciones
+  en_pal := F
+  long_pal := 0
+  suma_long := 0
+  cant_pal := 0
+  cant_orac := 0
+  Mientras c &lt;&gt; '#' Hacer                      // recorre texto completo
+    // nivel palabra
+    Si c &lt;&gt; ' ' y c &lt;&gt; '.' Entonces
+      Si no en_pal Entonces
+        en_pal := V
+        long_pal := 0
+      FinSi
+      long_pal := long_pal + 1
+    Contrario
+      // cerró palabra por espacio o punto
+      Si en_pal Entonces
+        en_pal := F
+        cant_pal := cant_pal + 1
+        suma_long := suma_long + long_pal
+      FinSi
+      // si es punto, cierra oración
+      Si c = '.' Entonces
+        cant_orac := cant_orac + 1
+        Si cant_pal &gt; 0 Entonces
+
+          prom_orac := suma_long / cant_pal
+          ESC(&quot;Promedio en oración &quot;, cant_orac, &quot;: &quot;, prom_orac)
+        Contrario
+          ESC(&quot;Oración &quot;, cant_orac, &quot; sin palabras&quot; )
+        FinSi
+        // reset para nueva oración
+        suma_long := 0
+        cant_pal := 0
+      FinSi
+    FinSi
+    AVZ(S, c)
+  FinMientras
+  // cierre por fin sin punto final
+  Si en_pal Entonces
+    cant_pal := cant_pal + 1
+    suma_long := suma_long + long_pal
+  FinSi
+  Si cant_pal &gt; 0 Entonces
+    cant_orac := cant_orac + 1
+    prom_orac := suma_long / cant_pal
+    ESC(&quot;Promedio en oración &quot;, cant_orac, &quot;: &quot;, prom_orac)
+
+  FinSi
+  // promedio global (si se requiere)
+  // (podría promediar los promedios por oración o sobre todas las palabras del texto)
+FINACCION
+</code></pre>
+<hr />
+<h2 id="buenas-practicas-y-chequeos">Buenas prácticas y chequeos</h2>
+<ul>
+<li><strong>Definí claramente</strong> los delimitadores de <strong>inicio</strong> y <strong>fin</strong> (espacio, punto, marca <code>'#'</code>, tamaño fijo, etc.).</li>
+<li><strong>Normalizá casos de borde</strong>: múltiples espacios, texto que <strong>no termina</strong> en delimitador, secuencias vacías.</li>
+<li>En encadenadas de tamaño fijo, <strong>validá longitud</strong> (evitá bloques incompletos).</li>
+<li>Mantené <strong>estado mínimo</strong>: banderas <code>en_palabra</code> / <code>en_contenido</code>, contadores y acumuladores.</li>
+<li>Documentá la <strong>política de conteo</strong>: ¿se cuentan palabras vacías? ¿quién cierra la última palabra si no hay blanco final?</li>
+</ul>
+<hr />
+<h2 id="resumen">Resumen</h2>
+<ul>
+<li>Las subsecuencias modelan <strong>segmentos consecutivos</strong> dentro de una secuencia.</li>
+<li><strong>Enlazadas</strong>: bloques consecutivos (p. ej., códigos de 4). <strong>Jerárquicas</strong>: niveles (texto→oración→palabra).</li>
+<li>Los <strong>patrones</strong> propuestos cubren conteo de palabras, longitudes, oraciones y tratamiento por bloques.</li>
+<li>El éxito del algoritmo depende de <strong>definir bien los delimitadores</strong> y <strong>normalizar casos de borde</strong>.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../05-secuencias-datos/" class="btn btn-neutral float-left" title="Secuencias de datos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../07-registros/" class="btn btn-neutral float-right" title="Registros">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../05-secuencias-datos/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../07-registros/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

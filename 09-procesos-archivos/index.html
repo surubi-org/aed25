@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Procesos con Archivos - AED Surubí</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Procesos con Archivos";
+        var mkdocs_page_input_path = "09-procesos-archivos.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AED Surubí
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introducciȯn</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02-secuenciales-condicionales/">Condicionales</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03-repetitivas/">Repetitivas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04-funciones-procedimientos/">Funciones y Procedimientos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05-secuencias-datos/">Secuencias de datos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06-subsecuencias/">Subsecuencias</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07-registros/">Registros</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08-archivos/">Archivos</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Procesos con Archivos</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#calidad-de-datos-en-archivos">Calidad de datos en archivos</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#tipos-de-validacion">Tipos de validación</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#snippet-validacion-de-fecha">Snippet: validación de fecha</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#que-es-un-proceso">¿Qué es un proceso?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clasificacion-general">Clasificación general</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#procesos-individuales">Procesos individuales</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#procesos-multiples">Procesos múltiples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#patrones-de-procesos-individuales">Patrones de procesos individuales</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-carga-generacion-de-archivo">1) Carga (generación de archivo)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-emision-listador">2) Emisión / Listador</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-padron-totales-finales">3) Padrón (totales finales)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-estadistico-con-tabla-de-frecuencias">4) Estadístico con tabla de frecuencias</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#patrones-de-procesos-multiples">Patrones de procesos múltiples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#5-apareo-merge-de-dos-archivos-ordenados-por-la-misma-clave">5) Apareo (merge) de dos archivos ordenados por la misma clave</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-interseccion-claves-comunes-de-dos-archivos-ordenados">6) Intersección (claves comunes) de dos archivos ordenados</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-maestrodetalle-actualizacion">7) Maestro–Detalle (actualización)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#buenas-practicas">Buenas prácticas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resumen">Resumen</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10-corte-control/">Corte de Control</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AED Surubí</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Procesos con Archivos</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="procesos-con-archivos">Procesos con Archivos</h1>
+<p>En esta página se sistematizan los <strong>procesos sobre archivos</strong>: validaciones de calidad de datos, procesos <strong>individuales</strong> y <strong>múltiples</strong>, más <strong>patrones de pseudocódigo</strong> listos para reutilizar. Estilo de documentación: conciso, con ejemplos ejecutables en pseudocódigo.</p>
+<hr />
+<h2 id="calidad-de-datos-en-archivos">Calidad de datos en archivos</h2>
+<p>Antes de procesar, verificá <strong>consistencia</strong> y <strong>congruencia</strong> de los registros.</p>
+<ul>
+<li>
+<p><strong>Consistencia</strong>: cada campo respeta su <strong>formato</strong> y <strong>dominio</strong> (rango o conjunto permitido).</p>
+</li>
+<li>
+<p>Ej.: <code>FECHA = {anio: 2000..2100, mes: 1..12, dia: 1..31}</code>.</p>
+</li>
+<li>
+<p><strong>Congruencia</strong>: la combinación de campos es <strong>válida entre sí</strong>.</p>
+</li>
+<li>
+<p>Ej.: <code>31/02/2024</code> es <strong>incongruente</strong> aunque cada campo, por separado, tiene números válidos.</p>
+</li>
+</ul>
+<h3 id="tipos-de-validacion">Tipos de validación</h3>
+<ul>
+<li><strong>Gruesa (intra‑registro)</strong>: entre campos del <strong>mismo</strong> registro (p. ej., <em>fecha válida del calendario</em>).</li>
+<li><strong>Fina (inter‑archivo)</strong>: entre campos de <strong>archivos distintos</strong> (p. ej., DNI en <code>Comisiones</code> existe en <code>Legajos</code>).</li>
+</ul>
+<h4 id="snippet-validacion-de-fecha">Snippet: validación de fecha</h4>
+<pre><code class="language-pseudocode">FUNCION FechaValida(f: FECHA): logico
+    devolver (2000 &lt;= f.anio &lt;= 2100) y (1 &lt;= f.mes &lt;= 12) y (1 &lt;= f.dia &lt;= 31) y
+            ((f.mes en {1,3,5,7,8,10,12} y f.dia &lt;= 31) o
+             (f.mes en {4,6,9,11}          y f.dia &lt;= 30) o
+             (f.mes = 2                    y f.dia &lt;= 29)) // simple: admite 29 sin chequear bisiesto
+FINFUNCION
+</code></pre>
+<hr />
+<h2 id="que-es-un-proceso">¿Qué es un proceso?</h2>
+<p>Conjunto de <strong>operaciones</strong> que transforman <strong>datos de entrada</strong> (archivos) en <strong>resultados</strong> (salidas/archivos/listados). Al diseñar, definí:</p>
+<ol>
+<li><strong>Entradas</strong> (fuentes, orden, claves)</li>
+<li><strong>Transformaciones</strong> (reglas, acumulaciones, cortes)</li>
+<li><strong>Salidas</strong> (listados, padrones, archivos generados)</li>
+</ol>
+<hr />
+<h2 id="clasificacion-general">Clasificación general</h2>
+<h3 id="procesos-individuales">Procesos <strong>individuales</strong></h3>
+<p>Un solo <strong>archivo de entrada</strong> y 0 o 1 <strong>archivo de salida</strong>.</p>
+<p><strong>Tipos frecuentes</strong></p>
+<ul>
+<li><strong>Carga/Generación</strong> (crear archivo consistente)</li>
+<li><strong>Emisión/Listador</strong> (salida impresa)</li>
+<li><strong>Padrón</strong> (listador + totales <strong>finales</strong>)</li>
+<li><strong>Corte de control</strong> (padrones con <strong>totales parciales</strong>; ver página <em>10‑corte‑control</em>)</li>
+<li><strong>Estadísticos</strong> (contabilizar por categorías con tabla de frecuencias)</li>
+</ul>
+<h3 id="procesos-multiples">Procesos <strong>múltiples</strong></h3>
+<p>Varios archivos de entrada y/o salida.</p>
+<p><strong>Tipos frecuentes</strong></p>
+<ul>
+<li><strong>Apareo (merge)</strong> de archivos <strong>ordenados</strong> por la misma clave</li>
+<li><strong>Intersección/Unión/Diferencia</strong> entre archivos ordenados</li>
+<li><strong>Maestro–Detalle</strong> (actualizaciones)</li>
+<li><strong>Generación transformadora</strong> (split/partition a múltiples salidas)</li>
+</ul>
+<hr />
+<h2 id="patrones-de-procesos-individuales">Patrones de procesos <strong>individuales</strong></h2>
+<h3 id="1-carga-generacion-de-archivo">1) Carga (generación de archivo)</h3>
+<pre><code class="language-pseudocode">ACCION Carga ES
+AMBIENTE
+  TIPO REG = Registro
+      clave: AN(13)
+      fecha: FECHA
+      valor: N(9)
+  FinRegistro
+  Nuevo: Archivo de REG ordenado por clave
+  R: REG
+  i: entero
+PROCESO
+  ABRIR /S(Nuevo)
+  Para i := 1 Hasta 100 Hacer
+      Esc(&quot;clave, dia, mes, anio, valor:&quot;)
+      Leer(R.clave); Leer(R.fecha.dia); Leer(R.fecha.mes); Leer(R.fecha.anio); Leer(R.valor)
+      Si FechaValida(R.fecha) Entonces
+          ESCRIBIR(Nuevo, R)
+      FinSi
+  FinPara
+  CERRAR(Nuevo)
+FINACCION
+</code></pre>
+<h3 id="2-emision-listador">2) Emisión / Listador</h3>
+<pre><code class="language-pseudocode">ACCION Listar ES
+AMBIENTE
+  A: Archivo de REG
+  R: REG
+PROCESO
+  ABRIR E/(A)
+  LEER(A, R)
+  Mientras NFDA(A) Hacer
+     Esc(R.clave, R.fecha.dia, '/', R.fecha.mes, '/', R.fecha.anio, R.valor)
+     LEER(A, R)
+  FinMientras
+  CERRAR(A)
+FINACCION
+</code></pre>
+<h3 id="3-padron-totales-finales">3) Padrón (totales finales)</h3>
+<pre><code class="language-pseudocode">ACCION Padron ES
+AMBIENTE
+  A: Archivo de REG ordenado por clave
+  R: REG
+  total: entero
+PROCESO
+  total := 0
+  ABRIR E/(A)
+  LEER(A, R)
+  Mientras NFDA(A) Hacer
+     Esc(R.clave, R.valor)
+     total := total + 1
+     LEER(A, R)
+  FinMientras
+  Esc(&quot;Total de registros:&quot;, total)
+  CERRAR(A)
+FINACCION
+</code></pre>
+<h3 id="4-estadistico-con-tabla-de-frecuencias">4) Estadístico con tabla de frecuencias</h3>
+<pre><code class="language-pseudocode">ACCION EstadisticoPorMes ES
+AMBIENTE
+  A: Archivo de REG
+  R: REG
+  freq: arreglo[1..12] de entero
+  m: entero
+PROCESO
+  Para m := 1 Hasta 12 Hacer freq[m] := 0 FinPara
+  ABRIR E/(A); LEER(A, R)
+  Mientras NFDA(A) Hacer
+      freq[R.fecha.mes] := freq[R.fecha.mes] + 1
+      LEER(A, R)
+  FinMientras; CERRAR(A)
+  Para m := 1 Hasta 12 Hacer Esc(&quot;Mes&quot;, m, &quot;:&quot;, freq[m]) FinPara
+FINACCION
+</code></pre>
+<blockquote>
+<p><strong>Corte de control</strong> se desarrolla con detalle en <em>10‑corte‑control.md</em> (totales por <strong>niveles de clave</strong>).</p>
+</blockquote>
+<hr />
+<h2 id="patrones-de-procesos-multiples">Patrones de procesos <strong>múltiples</strong></h2>
+<h3 id="5-apareo-merge-de-dos-archivos-ordenados-por-la-misma-clave">5) Apareo (merge) de dos archivos ordenados por la misma clave</h3>
+<p>Combina <code>A</code> y <code>B</code> (ambos <strong>ordenados</strong>) en <code>C</code>.</p>
+<pre><code class="language-pseudocode">
+ACCION Apareo ES
+AMBIENTE
+  A, B, C: Archivo de REG // todos ordenados por 'clave'
+  RA, RB: REG
+PROCESO
+  ABRIR E/(A); ABRIR E/(B); ABRIR /S(C)
+  LEER(A, RA); LEER(B, RB)
+  Mientras NFDA(A) y NFDA(B) Hacer
+    Si RA.clave &lt; RB.clave Entonces
+        ESCRIBIR(C, RA); LEER(A, RA)
+    Sino Si RB.clave &lt; RA.clave Entonces
+        ESCRIBIR(C, RB); LEER(B, RB)
+    Sino // claves iguales → decidir política (p.ej., preferir A)
+        ESCRIBIR(C, RA); LEER(A, RA); LEER(B, RB)
+    FinSi
+  FinMientras
+  // arrastre
+  Mientras NFDA(A) Hacer ESCRIBIR(C, RA); LEER(A, RA) FinMientras
+  Mientras NFDA(B) Hacer ESCRIBIR(C, RB); LEER(B, RB) FinMientras
+  CERRAR(A); CERRAR(B); CERRAR(C)
+FINACCION
+</code></pre>
+<h3 id="6-interseccion-claves-comunes-de-dos-archivos-ordenados">6) Intersección (claves comunes) de dos archivos ordenados</h3>
+<pre><code class="language-pseudocode">ACCION Interseccion ES
+AMBIENTE
+  A, B, C: Archivo de REG // C = comunes
+  RA, RB: REG
+PROCESO
+  ABRIR E/(A); ABRIR E/(B); ABRIR /S(C)
+  LEER(A, RA); LEER(B, RB)
+  Mientras NFDA(A) y NFDA(B) Hacer
+     Si RA.clave = RB.clave Entonces
+        ESCRIBIR(C, RA)
+        LEER(A, RA); LEER(B, RB)
+     Sino Si RA.clave &lt; RB.clave Entonces
+        LEER(A, RA)
+     Sino
+        LEER(B, RB)
+     FinSi
+  FinMientras
+  CERRAR(A); CERRAR(B); CERRAR(C)
+FINACCION
+</code></pre>
+<h3 id="7-maestrodetalle-actualizacion">7) Maestro–Detalle (actualización)</h3>
+<p>Actualiza <code>Maestro</code> con movimientos de <code>Detalle</code> (ambos <strong>ordenados por clave</strong>).</p>
+<pre><code class="language-pseudocode">ACCION MaestroDetalle ES
+AMBIENTE
+  Maestro: Archivo de REG
+  Detalle: Archivo de RegistroMov // {clave, delta}
+  Salida:  Archivo de REG
+  RM: REG; RD: RegistroMov
+PROCESO
+  ABRIR E/(Maestro); ABRIR E/(Detalle); ABRIR /S(Salida)
+
+  LEER(Maestro, RM); LEER(Detalle, RD)
+  Mientras NFDA(Maestro) Hacer
+     Mientras NFDA(Detalle) y RD.clave &lt; RM.clave Hacer LEER(Detalle, RD) FinMientras
+     Mientras NFDA(Detalle) y RD.clave = RM.clave Hacer
+         RM.valor := RM.valor + RD.delta
+
+         LEER(Detalle, RD)
+     FinMientras
+     ESCRIBIR(Salida, RM)
+     LEER(Maestro, RM)
+  FinMientras
+  CERRAR(Maestro); CERRAR(Detalle); CERRAR(Salida)
+FINACCION
+</code></pre>
+<blockquote>
+<p>Variantes: <strong>Unión</strong> (todos los de A y B), <strong>Diferencia</strong> (de A no presentes en B), <strong>Join</strong> por clave compuesta.</p>
+</blockquote>
+<hr />
+<h2 id="buenas-practicas">Buenas prácticas</h2>
+<ul>
+<li><strong>Precondiciones</strong>: exigí <strong>orden</strong> por clave y definí <strong>política</strong> para claves duplicadas.</li>
+<li><strong>Lectura anticipada</strong> + bucles con <code>NFDA</code> evitan leer <strong>fuera de rango</strong>.</li>
+<li><strong>Separá responsabilidades</strong>: leer → tratar → emitir.</li>
+<li>Para estadísticas, elegí estructuras internas (vectores/tablas) con dominios <strong>acotados</strong>.</li>
+<li>Documentá <strong>invariantes</strong> (p. ej., “A y B están ordenados por <code>clave</code>”).</li>
+</ul>
+<hr />
+<h2 id="resumen">Resumen</h2>
+<ul>
+<li>Distinguí <strong>procesos individuales</strong> (carga, emisión, padrón, estadístico, corte de control) y <strong>múltiples</strong> (apareo, intersección, maestro–detalle).</li>
+<li>Asegurá <strong>consistencia</strong> y <strong>congruencia</strong> antes de procesar.</li>
+<li>Los <strong>patrones</strong> de esta página cubren los casos más comunes y son base para diseños más complejos (balanceos, consolidaciones, joins).</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../08-archivos/" class="btn btn-neutral float-left" title="Archivos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../10-corte-control/" class="btn btn-neutral float-right" title="Corte de Control">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../08-archivos/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../10-corte-control/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

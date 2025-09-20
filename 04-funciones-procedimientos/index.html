@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Funciones y Procedimientos - AED Surubí</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Funciones y Procedimientos";
+        var mkdocs_page_input_path = "04-funciones-procedimientos.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AED Surubí
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introducciȯn</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02-secuenciales-condicionales/">Condicionales</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03-repetitivas/">Repetitivas</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Funciones y Procedimientos</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#vision-general">Visión general</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#control-de-ejecucion">Control de ejecución</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#elementos-de-una-subaccion">Elementos de una subacción</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#reglas-practicas-de-parametros">Reglas prácticas de parámetros</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#procedimientos">Procedimientos</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#plantilla-pseudocodigo">Plantilla (pseudocódigo)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ejemplo-lectura-de-entradas">Ejemplo: Lectura de entradas</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#funciones">Funciones</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#plantilla-pseudocodigo_1">Plantilla (pseudocódigo)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ejemplo-1-mayor-de-3">Ejemplo 1: Mayor de 3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ejemplo-2-dos-digitos-iguales-correccion-de-retorno">Ejemplo 2: Dos dígitos iguales (corrección de retorno)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parametros-de-entrada-y-salida">Parámetros de entrada y salida</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#terminologia-util">Terminología útil</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ejemplo-contar-pares-con-procedimiento-auxiliar">Ejemplo: Contar pares con procedimiento auxiliar</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ejemplo-uso-de-funcion-dentro-de-un-algoritmo">Ejemplo: Uso de función dentro de un algoritmo</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#buenas-practicas">Buenas prácticas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#errores-frecuentes-y-como-evitarlos">Errores frecuentes (y cómo evitarlos)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resumen">Resumen</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05-secuencias-datos/">Secuencias de datos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06-subsecuencias/">Subsecuencias</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07-registros/">Registros</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08-archivos/">Archivos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09-procesos-archivos/">Procesos con Archivos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10-corte-control/">Corte de Control</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AED Surubí</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Funciones y Procedimientos</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="subacciones-funciones-y-procedimientos">Subacciones: Funciones y Procedimientos</h1>
+<p>En esta página se describen las <strong>subacciones</strong> y sus dos formas principales: <strong>funciones</strong> y <strong>procedimientos</strong>. Se cubren conceptos, reglas de diseño, sintaxis de pseudocódigo y ejemplos completos.</p>
+<hr />
+<h2 id="vision-general">Visión general</h2>
+<ul>
+<li><strong>Subacción</strong>: módulo que realiza una tarea específica dentro de una <strong>acción principal</strong>.</li>
+<li>Se escribe una sola vez y puede <strong>invocarse</strong> múltiples veces desde el algoritmo principal o desde otras subacciones.</li>
+<li>Mejora la legibilidad, reutilización y mantenimiento (estrategia de <em>divide y vencerás</em>).</li>
+</ul>
+<hr />
+<h2 id="control-de-ejecucion">Control de ejecución</h2>
+<p>Cuando el algoritmo principal <strong>llama</strong> a una subacción:</p>
+<ol>
+<li><strong>Se detiene</strong> la ejecución del llamador.</li>
+<li>Se ejecuta la subacción <strong>hasta finalizar</strong> su tarea.</li>
+<li>El control <strong>retorna</strong> al punto siguiente a la llamada.</li>
+</ol>
+<blockquote>
+<p>Este comportamiento aplica tanto a funciones como a procedimientos.</p>
+</blockquote>
+<hr />
+<h2 id="elementos-de-una-subaccion">Elementos de una subacción</h2>
+<ol>
+<li>
+<p><strong>Nombre</strong></p>
+</li>
+<li>
+<p>Debe ser <strong>representativo</strong> del objetivo del módulo.</p>
+</li>
+<li>
+<p>Debe ser <strong>único</strong> y <strong>no</strong> debe colisionar con <strong>palabras reservadas</strong> del pseudolenguaje.</p>
+</li>
+<li>
+<p><strong>Parámetros</strong></p>
+</li>
+<li>
+<p>Mecanismo para <strong>pasar datos</strong> entre el algoritmo principal y la subacción.</p>
+</li>
+<li>Pueden ser de <strong>entrada</strong> (datos que recibe) y/o <strong>salida</strong> (datos que devuelve por referencia o por resultado, según el modelo didáctico que uses).</li>
+</ol>
+<h3 id="reglas-practicas-de-parametros">Reglas prácticas de parámetros</h3>
+<ul>
+<li><strong>Cantidad</strong>: el número de parámetros <strong>formales</strong> debe coincidir con el de <strong>argumentos</strong> al invocar.</li>
+<li><strong>Orden y tipos</strong>: los parámetros en la llamada deben ser <strong>compatibles</strong> en tipo y <strong>posición</strong> con los formales.</li>
+</ul>
+<hr />
+<h2 id="procedimientos">Procedimientos</h2>
+<p>Un <strong>procedimiento</strong> es una subacción que <strong>no devuelve</strong> un valor como resultado de la llamada. Puede <strong>modificar</strong> parámetros de salida y/o producir efectos (por ejemplo, imprimir o escribir en una estructura).</p>
+<h3 id="plantilla-pseudocodigo">Plantilla (pseudocódigo)</h3>
+<pre><code class="language-pseudocode">SUBACCIÓN NombreProcedimiento(parámetros_formales) ES
+    // Declaraciones locales (si fueran necesarias)
+    // Acciones
+FINSUBACCIÓN
+
+</code></pre>
+<h3 id="ejemplo-lectura-de-entradas">Ejemplo: Lectura de entradas</h3>
+<pre><code class="language-pseudocode">SUBACCIÓN ObtenerEntradas ES
+    Esc(&quot;Ingrese valor&quot;)
+    Leer(valor)
+FINSUBACCIÓN
+
+ACCION Principal ES
+AMBIENTE
+    valor: entero
+PROCESO
+    ObtenerEntradas
+    // ... seguir usando 'valor'
+FINACCION
+</code></pre>
+<hr />
+<h2 id="funciones">Funciones</h2>
+<p>Una <strong>función</strong> es una subacción que <strong>recibe</strong> argumentos y <strong>devuelve un único resultado</strong>. Suele usarse dentro de expresiones o asignaciones.</p>
+<h3 id="plantilla-pseudocodigo_1">Plantilla (pseudocódigo)</h3>
+<pre><code class="language-pseudocode">FUNCION NombreFuncion(parámetros_formales): TipoDevuelto
+
+    // Declaraciones locales (si fueran necesarias)
+    // Acciones
+    NombreFuncion := &lt;expresión_resultado&gt;
+FINFUNCION
+</code></pre>
+<h3 id="ejemplo-1-mayor-de-3">Ejemplo 1: Mayor de 3</h3>
+<pre><code class="language-pseudocode">FUNCION MayorDe3(a,b,c: entero): entero
+    Si a &gt;= b y a &gt;= c Entonces
+        MayorDe3 := a
+    Contrario
+        Si b &gt;= a y b &gt;= c Entonces
+            MayorDe3 := b
+        Contrario
+            MayorDe3 := c
+        FinSi
+    FinSi
+FINFUNCION
+</code></pre>
+<h3 id="ejemplo-2-dos-digitos-iguales-correccion-de-retorno">Ejemplo 2: Dos dígitos iguales (corrección de retorno)</h3>
+<blockquote>
+<p>Dado un número de 2 cifras, determinar si es palíndromo (igual leído al derecho y al revés). Devuelve 1 si lo es, 0 si no.</p>
+</blockquote>
+<pre><code class="language-pseudocode">FUNCION DosCifrasIguales(n: entero): entero
+    // Separar decenas y unidades
+    dec := n DIV 10
+    uni := n MOD 10
+    Si dec = uni Entonces
+        DosCifrasIguales := 1
+
+    Contrario
+        DosCifrasIguales := 0
+    FinSi
+FINFUNCION
+</code></pre>
+<hr />
+<h2 id="parametros-de-entrada-y-salida">Parámetros de entrada y salida</h2>
+<h3 id="terminologia-util">Terminología útil</h3>
+<ul>
+<li><strong>Formales</strong> (o ficticios): se declaran en la <strong>definición</strong> del módulo.</li>
+<li><strong>Actuales</strong> (o argumentos): se suministran en la <strong>llamada</strong>.</li>
+</ul>
+<h3 id="ejemplo-contar-pares-con-procedimiento-auxiliar">Ejemplo: Contar pares con procedimiento auxiliar</h3>
+<pre><code class="language-pseudocode">SUBACCIÓN ContarPares(n: entero; pares: entero) ES
+    // 'pares' actúa como salida (por referencia en el modelo didáctico)
+    Si (n MOD 2 = 0) Entonces
+        pares := pares + 1
+    FinSi
+FINSUBACCIÓN
+
+ACCION Principal ES
+AMBIENTE
+    i, v, pares: entero
+PROCESO
+    pares := 0
+    Para i := 1 Hasta 100 Hacer
+        Leer(v)
+        ContarPares(v, pares)
+    FinPara
+    Esc(&quot;Cantidad de números pares:&quot;, pares)
+FINACCION
+</code></pre>
+<h3 id="ejemplo-uso-de-funcion-dentro-de-un-algoritmo">Ejemplo: Uso de función dentro de un algoritmo</h3>
+<pre><code class="language-pseudocode">ACCION SerieDosCifras ES
+AMBIENTE
+    i, v, cant: entero
+PROCESO
+    cant := 0
+    Para i := 1 Hasta 20 Hacer
+
+        Leer(v)
+        cant := cant + DosCifrasIguales(v)
+    FinPara
+    Esc(&quot;Cantidad de palíndromos de 2 dígitos:&quot;, cant)
+FINACCION
+</code></pre>
+<hr />
+<h2 id="buenas-practicas">Buenas prácticas</h2>
+<ul>
+<li><strong>Nombres claros</strong>: describen qué hace la subacción (por ejemplo, <code>CalcularPromedio</code> en lugar de <code>Proc1</code>).</li>
+<li><strong>Responsabilidad única</strong>: cada subacción debe resolver una tarea <strong>concreta</strong>.</li>
+<li><strong>Evitar efectos colaterales</strong> inesperados: documenta qué parámetros son de entrada/salida.</li>
+<li><strong>Validaciones</strong>: comprueba supuestos (por ejemplo, dominios de entrada) al inicio del módulo.</li>
+</ul>
+<hr />
+<h2 id="errores-frecuentes-y-como-evitarlos">Errores frecuentes (y cómo evitarlos)</h2>
+<ul>
+<li><strong>No asignar el valor de la función</strong> antes de <code>FINFUNCION</code> → Asegurá siempre <code>NombreFuncion := ...</code>.</li>
+<li><strong>Desorden o cantidad incorrecta de parámetros</strong> → Verificá orden, cantidad y tipos.</li>
+<li><strong>Nombres ambiguos o reservados</strong> → Elegí identificadores válidos y expresivos.</li>
+</ul>
+<hr />
+<h2 id="resumen">Resumen</h2>
+<ul>
+<li>Las <strong>subacciones</strong> encapsulan tareas y favorecen diseño modular.</li>
+<li><strong>Procedimientos</strong>: no devuelven valor; pueden producir efectos y modificar parámetros de salida.</li>
+<li><strong>Funciones</strong>: devuelven <strong>un único resultado</strong> y son útiles dentro de expresiones.</li>
+<li>Gestioná correctamente <strong>nombres</strong> y <strong>parámetros</strong> (cantidad, orden, tipo) para llamadas seguras.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../03-repetitivas/" class="btn btn-neutral float-left" title="Repetitivas"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../05-secuencias-datos/" class="btn btn-neutral float-right" title="Secuencias de datos">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../03-repetitivas/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../05-secuencias-datos/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

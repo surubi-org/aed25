@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Registros - AED Surubí</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Registros";
+        var mkdocs_page_input_path = "07-registros.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AED Surubí
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introducciȯn</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02-secuenciales-condicionales/">Condicionales</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03-repetitivas/">Repetitivas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04-funciones-procedimientos/">Funciones y Procedimientos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05-secuencias-datos/">Secuencias de datos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06-subsecuencias/">Subsecuencias</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Registros</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#vision-general">Visión general</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#anatomia-de-un-registro">Anatomía de un registro</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#selector-de-campo">Selector de campo</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tipos-de-campos">Tipos de campos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#campos-clave">Campos clave</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#por-formato">Por formato</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#por-funcion">Por función</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sintaxis-pseudocodigo">Sintaxis (pseudocódigo)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#definicion-de-tipo-registro-y-variables">Definición de tipo registro y variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#acceso-a-campos-selector">Acceso a campos (selector)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#campos-continente-anidacion">Campos continente (anidación)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#patrones-de-uso">Patrones de uso</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-carga-de-un-registro-entrada-de-datos">1) Carga de un registro (entrada de datos)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-emision-salida-formateada">2) Emisión (salida formateada)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-actualizacion-de-campos">3) Actualización de campos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-comparacion-por-clave-primaria">4) Comparación por clave primaria</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#buenas-practicas">Buenas prácticas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#errores-frecuentes">Errores frecuentes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resumen">Resumen</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08-archivos/">Archivos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09-procesos-archivos/">Procesos con Archivos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10-corte-control/">Corte de Control</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AED Surubí</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Registros</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="registros">Registros</h1>
+<p>En esta página se introducen los <strong>registros</strong> como tipo de dato estructurado: su motivación, definición, componentes, clasificación de campos (contenido/continente), <strong>campos clave</strong> (primaria/foránea/secundaria), sintaxis en pseudocódigo y ejemplos prácticos. El foco está en el <strong>almacenamiento en memoria interna</strong> y el tratamiento como <strong>unidad lógica</strong>.</p>
+<hr />
+<h2 id="vision-general">Visión general</h2>
+<p>Un <strong>registro</strong> es un <strong>tipo de dato estructurado y estático</strong> compuesto por <strong>campos</strong> que pueden ser de <strong>diferentes tipos</strong> (heterogéneo). Se utiliza para representar <strong>entidades</strong> del mundo real (por ejemplo, <em>estudiante</em>, <em>producto</em>, <em>medicamento</em>).</p>
+<p><strong>Ideas clave</strong></p>
+<ul>
+<li>Estructura <strong>heterogénea</strong>: cada campo puede ser entero, real, carácter/alfanumérico, lógico u otro <strong>registro</strong>.</li>
+<li><strong>Memoria interna</strong>: los registros viven en RAM mientras el algoritmo los procesa.</li>
+<li><strong>Unidad de tratamiento</strong>: aunque tenga varios campos, el registro se considera <strong>una sola entidad</strong>; se accede a sus partes con el <strong>selector de campo</strong>.</li>
+</ul>
+<hr />
+<h2 id="anatomia-de-un-registro">Anatomía de un registro</h2>
+<p>Un <strong>campo</strong> se define por:</p>
+<ul>
+<li><strong>Nombre</strong> (identificador único dentro del registro)</li>
+<li><strong>Tipo</strong> (entero, real, alfanumérico, lógico, u otra estructura)</li>
+<li><strong>Tamaño</strong> (si aplica, p. ej., AN(30), N(8), etc.)</li>
+</ul>
+<h3 id="selector-de-campo">Selector de campo</h3>
+<p>Se utiliza para especificar a qué campo se accede dentro del registro. En pseudocódigo lo representaremos con el <strong>punto</strong> (<code>.</code>): <code>reg.campo</code>.</p>
+<hr />
+<h2 id="tipos-de-campos">Tipos de campos</h2>
+<ul>
+<li><strong>Campos contenido</strong>: almacenan un <strong>único dato simple</strong> (p. ej., <code>edad: entero</code>).</li>
+<li><strong>Campos continente</strong>: están <strong>compuestos</strong> por otros campos (p. ej., <code>fecha</code> con <code>día/mes/año</code>; <code>telefono</code> con <code>característica/número</code>).</li>
+</ul>
+<blockquote>
+<p>Un <strong>campo continente</strong> puede anidarse: <code>persona.domicilio.ciudad</code>.</p>
+</blockquote>
+<hr />
+<h2 id="campos-clave">Campos clave</h2>
+<p>Un <strong>campo clave</strong> identifica un registro <strong>de manera única</strong> dentro de un conjunto.</p>
+<h3 id="por-formato">Por formato</h3>
+<ul>
+<li><strong>Clave simple</strong>: formada por <strong>un solo</strong> campo contenido (p. ej., <code>dni</code>).</li>
+<li><strong>Clave compleja</strong>: formada por <strong>varios</strong> campos (usualmente continentales) p. ej., <code>fecha_vacunación = (día, mes, año)</code>.</li>
+</ul>
+<h3 id="por-funcion">Por función</h3>
+<ul>
+<li><strong>Clave primaria</strong>: identifica <strong>únicamente</strong> el registro (no se repite).</li>
+<li><strong>Clave foránea</strong>: referencia la <strong>clave primaria</strong> de otro conjunto de registros (relación entre entidades).</li>
+<li><strong>Clave secundaria</strong>: alternativa de acceso/ordenación que <strong>no</strong> garantiza unicidad.</li>
+</ul>
+<hr />
+<h2 id="sintaxis-pseudocodigo">Sintaxis (pseudocódigo)</h2>
+<h3 id="definicion-de-tipo-registro-y-variables">Definición de tipo registro y variables</h3>
+<pre><code class="language-pseudocode">// Definición del tipo
+ESTUDIANTE = Registro
+  dni: N(8)
+  apellido: AN(30)
+  nombre: AN(30)
+  carrera: {ISI, IEM, IQ, LAR}    // ejemplo de tipo enumerado
+  ingreso: N(4)                    // año de ingreso
+FinRegistro
+
+// Variable de tipo registro
+alumno: ESTUDIANTE
+</code></pre>
+<h3 id="acceso-a-campos-selector">Acceso a campos (selector)</h3>
+<pre><code class="language-pseudocode">alumno.dni := 45236555
+alumno.apellido := &quot;PEREZ&quot;
+alumno.nombre := &quot;JUAN&quot;
+alumno.carrera := ISI
+alumno.ingreso := 2023
+</code></pre>
+<h3 id="campos-continente-anidacion">Campos continente (anidación)</h3>
+<pre><code class="language-pseudocode">FECHA = Registro
+  dia: 1..31
+  mes: 1..12
+  anio: 1900..2100
+FinRegistro
+
+VACUNA = Registro
+  codigo: AN(13)
+  abreviatura: AN(4)
+  fecha_aplicacion: FECHA        // campo continente
+FinRegistro
+
+v: VACUNA
+v.fecha_aplicacion.dia := 23
+v.fecha_aplicacion.mes := 4
+v.fecha_aplicacion.anio := 2021
+</code></pre>
+<hr />
+<h2 id="patrones-de-uso">Patrones de uso</h2>
+<h3 id="1-carga-de-un-registro-entrada-de-datos">1) Carga de un registro (entrada de datos)</h3>
+<pre><code class="language-pseudocode">ACCION CargarEstudiante ES
+AMBIENTE
+  est: ESTUDIANTE
+PROCESO
+  Esc(&quot;DNI:&quot;)          ; Leer(est.dni)
+  Esc(&quot;Apellido:&quot;)     ; Leer(est.apellido)
+  Esc(&quot;Nombre:&quot;)       ; Leer(est.nombre)
+  Esc(&quot;Carrera:&quot;)      ; Leer(est.carrera)
+  Esc(&quot;Año ingreso:&quot;)  ; Leer(est.ingreso)
+  // A partir de aquí, 'est' está completo y listo para ser usado
+FINACCION
+</code></pre>
+<h3 id="2-emision-salida-formateada">2) Emisión (salida formateada)</h3>
+<pre><code class="language-pseudocode">
+SUBACCION ImprimirEstudiante(e: ESTUDIANTE) ES
+  Esc(&quot;[&quot;, e.dni, &quot;] &quot;, e.apellido, &quot;, &quot;, e.nombre, &quot; - &quot;, e.carrera, &quot; (&quot;, e.ingreso, &quot;)&quot;)
+FINSUBACCION
+</code></pre>
+<h3 id="3-actualizacion-de-campos">3) Actualización de campos</h3>
+<pre><code class="language-pseudocode">SUBACCION ActualizarIngreso(e: ESTUDIANTE; nuevo: N(4)) ES
+  e.ingreso := nuevo
+FINSUBACCION
+</code></pre>
+<h3 id="4-comparacion-por-clave-primaria">4) Comparación por clave primaria</h3>
+<pre><code class="language-pseudocode">FUNCION MismaPersona(a, b: ESTUDIANTE): logico
+  devolver (a.dni = b.dni)
+FINFUNCION
+</code></pre>
+<blockquote>
+<p>En colecciones (listas, tablas, archivos), usá la <strong>clave primaria</strong> para búsquedas y detección de duplicados.</p>
+</blockquote>
+<hr />
+<h2 id="buenas-practicas">Buenas prácticas</h2>
+<ul>
+<li><strong>Definí primero el tipo</strong> de registro en el <em>Ambiente</em> y luego declarás variables de ese tipo.</li>
+<li>Mantené <strong>nombres claros</strong> de campos y respetá <strong>dominios</strong> (rangos/enums) para validar consistencia.</li>
+<li>Considerá <strong>clave primaria</strong> desde el diseño: ¿qué campo(s) identifican sin ambigüedad?</li>
+<li>Tratá el registro como <strong>unidad</strong>: encapsulá emisiones, cargas y validaciones en subacciones.</li>
+<li>Para campos <strong>continentales</strong>, preferí tipos explícitos (como <code>FECHA</code>) en vez de tres enteros sueltos.</li>
+</ul>
+<hr />
+<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li><strong>Omitir asignación de subcampos</strong> en campos continentales (p. ej., setear <code>fecha</code> sin <code>día/mes/año</code>).</li>
+<li><strong>Duplicados</strong> por ausencia de verificación de <strong>clave primaria</strong>.</li>
+<li><strong>Inconsistencias</strong> de dominio (p. ej., <code>mes = 16</code>) por no validar rangos.</li>
+</ul>
+<hr />
+<h2 id="resumen">Resumen</h2>
+<ul>
+<li>Un <strong>registro</strong> modela una entidad con <strong>varios campos</strong> (posiblemente anidados).</li>
+<li>Se accede a los campos con un <strong>selector</strong> (<code>reg.campo</code>).</li>
+<li>Los <strong>campos clave</strong> son esenciales para identificación (primaria), relaciones (foránea) y acceso (secundaria).</li>
+<li>Diseñar tipos claros y validar dominios mejora la <strong>consistencia</strong> y facilita su posterior uso en <strong>archivos</strong> y <strong>procesos</strong>.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../06-subsecuencias/" class="btn btn-neutral float-left" title="Subsecuencias"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../08-archivos/" class="btn btn-neutral float-right" title="Archivos">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../06-subsecuencias/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../08-archivos/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

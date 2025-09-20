@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Archivos - AED Surubí</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Archivos";
+        var mkdocs_page_input_path = "08-archivos.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> AED Surubí
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introducciȯn</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02-secuenciales-condicionales/">Condicionales</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03-repetitivas/">Repetitivas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04-funciones-procedimientos/">Funciones y Procedimientos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05-secuencias-datos/">Secuencias de datos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06-subsecuencias/">Subsecuencias</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07-registros/">Registros</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Archivos</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#que-es-un-archivo">Qué es un archivo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#organizacion-de-archivos-fisicalogica">Organización de archivos (física/lógica)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#secuencial">Secuencial</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#relativa-directa">Relativa (directa)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#indexada">Indexada</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#modos-de-acceso">Modos de acceso</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tipos-de-datos-de-apoyo-util-en-definiciones">Tipos de datos de apoyo (útil en definiciones)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sentencias-de-gestion-de-archivos-pseudocodigo">Sentencias de gestión de archivos (pseudocódigo)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#definiciones-en-el-ambiente">Definiciones en el Ambiente</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#patrones-de-uso-snippets-reutilizables">Patrones de uso (snippets reutilizables)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-emision-listado-simple">1) Emisión (listado simple)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-cargageneracion-crear-archivo-consistente">2) Carga/Generación (crear archivo consistente)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-filtro-generacion-a-partir-de-entrada">3) Filtro (generación a partir de entrada)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-transformacion-a-multiples-salidas">4) Transformación a múltiples salidas</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#buenas-practicas">Buenas prácticas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resumen">Resumen</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09-procesos-archivos/">Procesos con Archivos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10-corte-control/">Corte de Control</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AED Surubí</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Archivos</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="archivos">Archivos</h1>
+<p>Esta página presenta el <strong>modelo de archivos</strong> aplicado a algoritmos: definición, organización física/lógica, modos de acceso y el <strong>conjunto de sentencias de pseudocódigo</strong> para abrir, leer, escribir y cerrar archivos. Se incluyen patrones de uso listos para reutilizar.</p>
+<hr />
+<h2 id="que-es-un-archivo">Qué es un archivo</h2>
+<p>Un <strong>archivo</strong> es un conjunto <strong>homogéneo de registros</strong> relacionados entre sí y organizados para un propósito específico.</p>
+<ul>
+<li>Un <strong>registro</strong> está compuesto por <strong>campos</strong> (simples o compuestos).</li>
+<li>Los <strong>archivos</strong> se almacenan en <strong>memoria externa</strong> (disco, pendrive). Su <strong>procesamiento</strong> ocurre en <strong>memoria interna</strong>.</li>
+</ul>
+<blockquote>
+<p>Relación jerárquica: <strong>Archivo → Registros → Campos</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="organizacion-de-archivos-fisicalogica">Organización de archivos (física/lógica)</h2>
+<h3 id="secuencial">Secuencial</h3>
+<p>Registros almacenados <strong>consecutivamente</strong>. Para acceder al registro <em>n</em>, es necesario pasar por los <em>n−1</em> anteriores.</p>
+<h3 id="relativa-directa">Relativa (directa)</h3>
+<p>El <strong>orden físico</strong> no coincide necesariamente con el <strong>orden lógico</strong>; el acceso se realiza por <strong>posición</strong> (relativa) o por una <strong>función de direccionamiento</strong>.</p>
+<h3 id="indexada">Indexada</h3>
+<p>Existen <strong>dos áreas</strong>:</p>
+<ul>
+<li><strong>Área de datos (primaria)</strong>: registros organizados secuencialmente por <strong>clave</strong>.</li>
+<li><strong>Área de índices</strong>: estructura auxiliar (tabla de índices) que permite <strong>localizar</strong> rápidamente por <strong>clave</strong>.</li>
+</ul>
+<hr />
+<h2 id="modos-de-acceso">Modos de acceso</h2>
+<ul>
+<li><strong>Secuencial</strong>: lectura en orden (desde el primero hasta el último).</li>
+<li><strong>Directo</strong>: salta a una posición/clave específica.</li>
+<li><strong>Mixto</strong>: combinación (p. ej., ubicar por clave y luego leer secuencialmente a partir de allí).</li>
+</ul>
+<hr />
+<h2 id="tipos-de-datos-de-apoyo-util-en-definiciones">Tipos de datos de apoyo (útil en definiciones)</h2>
+<ul>
+<li><strong>Tipo conjunto (enumerado)</strong></li>
+</ul>
+<p><code>pseudocode
+  Vocal = ('a','e','i','o','u')
+  Estado = ('Libre','Ocupado')</code>
+* <strong>Tipo rango</strong></p>
+<p><code>pseudocode
+  Mes  = 1..12
+  Edad = 0..110</code></p>
+<p>Estos tipos facilitan <strong>validar dominios</strong> al definir <strong>campos</strong> de un <strong>registro</strong>.</p>
+<hr />
+<h2 id="sentencias-de-gestion-de-archivos-pseudocodigo">Sentencias de gestión de archivos (pseudocódigo)</h2>
+<blockquote>
+<p>Convención: <code>Arch</code> es un <strong>archivo</strong>; <code>Reg</code> es una <strong>variable registro</strong> del <strong>formato</strong> del archivo.</p>
+</blockquote>
+<ul>
+<li><strong>Abrir archivo</strong></li>
+</ul>
+<p>```pseudocode
+  ABRIR E/(Arch)   // modo Entrada (solo lectura)
+  ABRIR /S(Arch)   // modo Salida  (solo escritura)</p>
+<p>```</p>
+<ul>
+<li><strong>Leer y detectar fin</strong></li>
+</ul>
+<p><code>pseudocode
+  LEER(Arch, Reg)      // trae el siguiente registro a 'Reg'
+  FDA(Arch)            // Fin De Archivo: verdadero si se llegó al final
+  NFDA(Arch)           // No Fin De Archivo: equivalente a NOT FDA(Arch)</code></p>
+<ul>
+<li><strong>Escribir y cerrar</strong></li>
+</ul>
+<p><code>pseudocode
+  ESCRIBIR(Arch, Reg)  // agrega/graba 'Reg' en el archivo (modo Salida)
+  CERRAR(Arch)</code></p>
+<blockquote>
+<p>Nota: algunos modelos didácticos usan <strong><code>FDA</code></strong>; otros proveen <strong><code>NFDA</code></strong>. Elegí uno y sé consistente (o definí <code>NFDA(Arch) := NO FDA(Arch)</code>).</p>
+</blockquote>
+<hr />
+<h2 id="definiciones-en-el-ambiente">Definiciones en el <em>Ambiente</em></h2>
+<pre><code class="language-pseudocode">// 1) Formato del registro
+aRegistro = Registro
+  url: AN(120)
+  fecha_pico: Registro
+      anio: 2000..2100
+      mes: 1..12
+      dia: 1..31
+    FinRegistro
+  reproducciones: N(9)
+FinRegistro
+
+// 2) Variables
+datos: Archivo de aRegistro ordenado por url      // ejemplo
+ing:  aRegistro
+</code></pre>
+<hr />
+<h2 id="patrones-de-uso-snippets-reutilizables">Patrones de uso (snippets reutilizables)</h2>
+<h3 id="1-emision-listado-simple">1) Emisión (listado simple)</h3>
+<p>Recorre un archivo <strong>de entrada</strong> y emite sus campos.</p>
+<pre><code class="language-pseudocode">ACCION Listar ES
+AMBIENTE
+  Arch: Archivo de aRegistro
+  Reg:  aRegistro
+PROCESO
+  ABRIR E/(Arch)
+  LEER(Arch, Reg)
+  Mientras NFDA(Arch) Hacer
+     Esc(Reg.url, ' ', Reg.fecha_pico.dia, '/', Reg.fecha_pico.mes, '/', Reg.fecha_pico.anio,
+         ' ', Reg.reproducciones)
+     LEER(Arch, Reg)
+  FinMientras
+  CERRAR(Arch)
+FINACCION
+</code></pre>
+<h3 id="2-cargageneracion-crear-archivo-consistente">2) Carga/Generación (crear archivo consistente)</h3>
+<p>Crea un archivo nuevo y graba registros ingresados por teclado.</p>
+<pre><code class="language-pseudocode">ACCION Cargar ES
+AMBIENTE
+  Nuevo: Archivo de aRegistro ordenado por url
+  Reg:   aRegistro
+  cont:  entero
+PROCESO
+  ABRIR /S(Nuevo)
+  cont := 1
+  Mientras cont &lt;= 100 Hacer
+     Esc('Ingrese url, fecha pico (d m a) y reproducciones:')
+     Leer(Reg.url)
+     Leer(Reg.fecha_pico.dia)
+     Leer(Reg.fecha_pico.mes)
+     Leer(Reg.fecha_pico.anio)
+     Leer(Reg.reproducciones)
+     ESCRIBIR(Nuevo, Reg)
+     cont := cont + 1
+  FinMientras
+  CERRAR(Nuevo)
+FINACCION
+</code></pre>
+<h3 id="3-filtro-generacion-a-partir-de-entrada">3) Filtro (generación a partir de entrada)</h3>
+<p>Lee un archivo de <strong>entrada</strong> y escribe en <strong>salida</strong> según una condición.</p>
+<pre><code class="language-pseudocode">ACCION FiltrarPorFecha ES
+AMBIENTE
+  In:  Archivo de aRegistro
+  Out: Archivo de aRegistro
+  R:   aRegistro
+PROCESO
+  ABRIR E/(In)
+  ABRIR /S(Out)
+  LEER(In, R)
+  Mientras NFDA(In) Hacer
+     Si (R.fecha_pico.mes = 5) y (R.fecha_pico.dia = 1) Entonces
+        ESCRIBIR(Out, R)
+     FinSi
+     LEER(In, R)
+  FinMientras
+  CERRAR(In)
+  CERRAR(Out)
+
+FINACCION
+</code></pre>
+<h3 id="4-transformacion-a-multiples-salidas">4) Transformación a múltiples salidas</h3>
+<p>Desvía los registros a dos archivos distintos.</p>
+<pre><code class="language-pseudocode">ACCION Particionar ES
+AMBIENTE
+  In:    Archivo de aRegistro
+  Top:   Archivo de aRegistro
+  Resto: Archivo de aRegistro
+  R: aRegistro
+PROCESO
+  ABRIR E/(In)
+  ABRIR /S(Top)
+  ABRIR /S(Resto)
+  LEER(In, R)
+  Mientras NFDA(In) Hacer
+     Si R.reproducciones &gt;= 100000 Entonces
+        ESCRIBIR(Top, R)
+     Contrario
+        ESCRIBIR(Resto, R)
+     FinSi
+     LEER(In, R)
+  FinMientras
+  CERRAR(In)
+  CERRAR(Top)
+  CERRAR(Resto)
+FINACCION
+</code></pre>
+<hr />
+<h2 id="buenas-practicas">Buenas prácticas</h2>
+<ul>
+<li>
+<p><strong>Definí claramente</strong> el <strong>formato</strong> de registro y los <strong>dominios</strong> (rangos/enums) de cada campo.</p>
+</li>
+<li>
+<p>Generá archivos <strong>consistentes</strong> (campos en rango, tipos correctos, claves únicas si aplica).</p>
+</li>
+<li>En emisión/listados, <strong>separá</strong> <em>lectura</em>, <em>tratamiento</em> y <em>salida</em> para mayor claridad.</li>
+<li>Cerrá siempre archivos con <code>CERRAR</code> para liberar recursos y <strong>persistir</strong> cambios.</li>
+<li>Elegí el <strong>modo de organización</strong> acorde: <em>secuencial</em> (recorridos completos), <em>relativa</em> (acceso por posición), <em>indexada</em> (búsqueda por clave).</li>
+</ul>
+<hr />
+<h2 id="resumen">Resumen</h2>
+<ul>
+<li>Un <strong>archivo</strong> agrupa <strong>registros</strong> homogéneos y reside en <strong>memoria externa</strong>.</li>
+<li>La <strong>organización</strong> define cómo se guardan (secuencial/relativa/indexada) y el <strong>acceso</strong> cómo se leen (secuencial/directo/mixto).</li>
+<li>Con <code>ABRIR</code>, <code>LEER</code>/<code>ESCRIBIR</code>, <code>FDA</code>/<code>NFDA</code> y <code>CERRAR</code> podés implementar <strong>emisión</strong>, <strong>carga</strong>, <strong>filtros</strong> y <strong>transformaciones</strong>.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../07-registros/" class="btn btn-neutral float-left" title="Registros"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../09-procesos-archivos/" class="btn btn-neutral float-right" title="Procesos con Archivos">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../07-registros/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../09-procesos-archivos/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
