@@ -10,4 +10,5 @@ nav:
   - Archivos: 08-archivos.md
   - Procesos con Archivos: 09-procesos-archivos.md
   - Corte de Control: 10-corte-control.md
-theme: readthedocs
+theme:
+  name: material

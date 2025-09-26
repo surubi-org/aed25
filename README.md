@@ -7,5 +7,5 @@ Funciona con bash y python3
 ```
 python3 -m venv .env
 source .env/bin/activate
-pip install mkdocs
+pip install -r requirements.txt
 ```
