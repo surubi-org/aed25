@@ -1,11 +1,13 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+      
+        <meta name="author" content="Chipaaco">
       
       
       
@@ -24,6 +26,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -41,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -51,7 +58,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -61,7 +75,7 @@
       
         
         <a href="#corte-de-control" class="md-skip">
-          Skip to content
+          Saltar a contenido
         </a>
       
     </div>
@@ -75,11 +89,11 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href=".." title="AED Surubí" class="md-header__button md-logo" aria-label="AED Surubí" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -103,6 +117,42 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -118,16 +168,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -138,7 +188,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -172,12 +222,12 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="AED Surubí" class="md-nav__button md-logo" aria-label="AED Surubí" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg>
 
     </a>
     AED Surubí
@@ -426,7 +476,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -435,7 +485,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -550,7 +600,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -559,7 +609,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -669,13 +719,13 @@
 
 
 
-<h1 id="corte-de-control">Corte de Control</h1>
+<h1 id="corte-de-control">Corte de Control<a class="headerlink" href="#corte-de-control" title="Permanent link">&para;</a></h1>
 <p>El <strong>corte de control</strong> es un proceso <em>individual</em> sobre archivos que permite <strong>emitir información jerárquica</strong> con <strong>totales parciales</strong> por niveles de clave y <strong>total general</strong>. Es una especialización de los padrones (listados) donde, además de recorrer, <strong>agrupamos</strong> y <strong>acumulamos</strong> por campos.</p>
 <blockquote>
 <p>⚠️ No todos los problemas se resuelven con corte de control. Se aplica cuando necesitás <strong>agregar</strong> (contar, sumar, min/max, etc.) por <strong>grupos</strong> definidos por <strong>claves</strong>.</p>
 </blockquote>
 <hr />
-<h2 id="requisitos-indispensables">Requisitos indispensables</h2>
+<h2 id="requisitos-indispensables">Requisitos indispensables<a class="headerlink" href="#requisitos-indispensables" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Clave compleja</strong> que identifique la jerarquía de agrupación (uno o más campos).</li>
 <li>
@@ -688,7 +738,7 @@
 </ol>
 <p>Si los datos <strong>no están ordenados</strong>, primero hay que <strong>ordenarlos</strong> o usar otro enfoque.</p>
 <hr />
-<h2 id="anatomia-del-algoritmo">Anatomía del algoritmo</h2>
+<h2 id="anatomia-del-algoritmo">Anatomía del algoritmo<a class="headerlink" href="#anatomia-del-algoritmo" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Resguardo de claves</strong>: variables que guardan la clave <strong>actual</strong> (p. ej., <code>res_ciu</code>, <code>res_raza</code>).</li>
 <li>
@@ -702,7 +752,7 @@
 <li><strong>Cierre final</strong>: al terminar el recorrido, <strong>forzar los cortes pendientes</strong> y emitir <strong>total general</strong>.</li>
 </ul>
 <hr />
-<h2 id="patron-base-1-nivel-de-corte">Patrón base (1 nivel de corte)</h2>
+<h2 id="patron-base-1-nivel-de-corte">Patrón base (1 nivel de corte)<a class="headerlink" href="#patron-base-1-nivel-de-corte" title="Permanent link">&para;</a></h2>
 <pre><code class="language-pseudocode">ACCION Corte1 ES
 AMBIENTE
   REG = Registro
@@ -755,7 +805,7 @@ FINACCION
 <p><strong>Idea</strong>: <em>ver corte → tratar → leer</em>. El orden ayuda a detectar el cambio <strong>antes</strong> de acumular en el grupo equivocado.</p>
 </blockquote>
 <hr />
-<h2 id="patron-de-2-niveles-nivel-2-nivel-1">Patrón de 2 niveles (Nivel 2 → Nivel 1)</h2>
+<h2 id="patron-de-2-niveles-nivel-2-nivel-1">Patrón de 2 niveles (Nivel 2 → Nivel 1)<a class="headerlink" href="#patron-de-2-niveles-nivel-2-nivel-1" title="Permanent link">&para;</a></h2>
 <p>Ejemplo clásico: <strong>Ciudad (nivel 2) → Raza (nivel 1)</strong>.
 Contar mascotas con <strong>peso &gt; 5 kg</strong> por <strong>Raza</strong> y <strong>Ciudad</strong>, y total general.</p>
 <pre><code class="language-pseudocode">ACCION Corte2 ES
@@ -829,7 +879,7 @@ FINACCION
 <p><strong>Regla de oro</strong>: cuando cambia un nivel <strong>superior</strong>, hay que <strong>cerrar primero</strong> todos los niveles <strong>inferiores</strong>.</p>
 </blockquote>
 <hr />
-<h2 id="patron-de-3-niveles-escalable">Patrón de 3+ niveles (escalable)</h2>
+<h2 id="patron-de-3-niveles-escalable">Patrón de 3+ niveles (escalable)<a class="headerlink" href="#patron-de-3-niveles-escalable" title="Permanent link">&para;</a></h2>
 <p>La idea se generaliza: <code>VER_CORTE</code> compara desde el <strong>nivel más alto</strong> al <strong>más bajo</strong>; cada <code>CORTE_k</code> <strong>llama</strong> al corte del nivel <strong>inmediato inferior</strong> antes de emitir y reiniciar su totalizador.</p>
 <pre><code class="language-pseudocode">// Esqueleto para N niveles (L3 &gt; L2 &gt; L1)
 // Si cambia L3 → CORTE_L3 (que llama a CORTE_L2 → que llama a CORTE_L1)
@@ -840,7 +890,7 @@ FINACCION
 <p>En informes complejos, conviene <strong>modularizar</strong> cortes por nivel y mantener <strong>nombres claros</strong> (<code>res_l1</code>, <code>tot_l1</code>, etc.).</p>
 </blockquote>
 <hr />
-<h2 id="variantes-de-tratamiento">Variantes de tratamiento</h2>
+<h2 id="variantes-de-tratamiento">Variantes de tratamiento<a class="headerlink" href="#variantes-de-tratamiento" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Conteos</strong> (registros, casos que cumplen una condición)</li>
 <li><strong>Sumas</strong> (acumular un campo numérico)</li>
@@ -852,13 +902,13 @@ FINACCION
 <p>El bloque <code>TRATAR_REGISTRO</code> cambia según la métrica.</p>
 </blockquote>
 <hr />
-<h2 id="casos-de-aplicacion-y-no-aplicacion">Casos de aplicación y no aplicación</h2>
+<h2 id="casos-de-aplicacion-y-no-aplicacion">Casos de aplicación y no aplicación<a class="headerlink" href="#casos-de-aplicacion-y-no-aplicacion" title="Permanent link">&para;</a></h2>
 <ul>
 <li>✔️ <strong>Aplicación</strong>: “Emitir totales de satélites <strong>por mes y por tipo</strong>” → ordenar por <strong>Mes, Tipo</strong>.</li>
 <li>❌ <strong>No aplicación</strong> (tal cual): “Totales de satélites <strong>en diciembre</strong> (sin agrupar)” → alcanza con <strong>filtro + padrón</strong>.</li>
 </ul>
 <hr />
-<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<h2 id="errores-frecuentes">Errores frecuentes<a class="headerlink" href="#errores-frecuentes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Archivo mal ordenado</strong> respecto de las claves de corte.</li>
 <li><strong>Olvidar el cierre final</strong> de cortes → se pierde el último grupo.</li>
@@ -867,7 +917,7 @@ FINACCION
 <li><strong>Tratar antes de <code>VER_CORTE</code></strong> → contamina el grupo anterior.</li>
 </ul>
 <hr />
-<h2 id="checklist-rapido">Checklist rápido</h2>
+<h2 id="checklist-rapido">Checklist rápido<a class="headerlink" href="#checklist-rapido" title="Permanent link">&para;</a></h2>
 <ul>
 <li>[ ] ¿Definiste <strong>clave(s)</strong> y <strong>orden</strong> del archivo?</li>
 <li>[ ] ¿Hiciste <strong>lectura anticipada</strong> y resguardaste claves?</li>
@@ -876,7 +926,7 @@ FINACCION
 <li>[ ] ¿Forzás el <strong>cierre final</strong> al terminar?</li>
 </ul>
 <hr />
-<h2 id="resumen">Resumen</h2>
+<h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h2>
 <p>El <strong>corte de control</strong> estructura informes jerárquicos por <strong>grupos</strong>: requiere <strong>clave compleja</strong> y <strong>archivo ordenado</strong>. Su patrón esencial es: <strong>leer → ver corte → tratar → leer</strong>, con <strong>cortes en cascada</strong> desde el nivel inferior al superior y un <strong>cierre final</strong> que emite totales pendientes y el <strong>total general</strong>.</p>
 
 
@@ -926,7 +976,7 @@ FINACCION
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.path"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>

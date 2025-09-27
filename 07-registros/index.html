@@ -1,11 +1,13 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+      
+        <meta name="author" content="Chipaaco">
       
       
       
@@ -26,6 +28,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -43,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -53,7 +60,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -63,7 +77,7 @@
       
         
         <a href="#registros" class="md-skip">
-          Skip to content
+          Saltar a contenido
         </a>
       
     </div>
@@ -77,11 +91,11 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href=".." title="AED Surubí" class="md-header__button md-logo" aria-label="AED Surubí" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -105,6 +119,42 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -120,16 +170,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -140,7 +190,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -174,12 +224,12 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="AED Surubí" class="md-nav__button md-logo" aria-label="AED Surubí" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg>
 
     </a>
     AED Surubí
@@ -362,7 +412,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -371,7 +421,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -657,7 +707,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -666,7 +716,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -881,10 +931,10 @@
 
 
 
-<h1 id="registros">Registros</h1>
+<h1 id="registros">Registros<a class="headerlink" href="#registros" title="Permanent link">&para;</a></h1>
 <p>En esta página se introducen los <strong>registros</strong> como tipo de dato estructurado: su motivación, definición, componentes, clasificación de campos (contenido/continente), <strong>campos clave</strong> (primaria/foránea/secundaria), sintaxis en pseudocódigo y ejemplos prácticos. El foco está en el <strong>almacenamiento en memoria interna</strong> y el tratamiento como <strong>unidad lógica</strong>.</p>
 <hr />
-<h2 id="vision-general">Visión general</h2>
+<h2 id="vision-general">Visión general<a class="headerlink" href="#vision-general" title="Permanent link">&para;</a></h2>
 <p>Un <strong>registro</strong> es un <strong>tipo de dato estructurado y estático</strong> compuesto por <strong>campos</strong> que pueden ser de <strong>diferentes tipos</strong> (heterogéneo). Se utiliza para representar <strong>entidades</strong> del mundo real (por ejemplo, <em>estudiante</em>, <em>producto</em>, <em>medicamento</em>).</p>
 <p><strong>Ideas clave</strong></p>
 <ul>
@@ -893,17 +943,17 @@
 <li><strong>Unidad de tratamiento</strong>: aunque tenga varios campos, el registro se considera <strong>una sola entidad</strong>; se accede a sus partes con el <strong>selector de campo</strong>.</li>
 </ul>
 <hr />
-<h2 id="anatomia-de-un-registro">Anatomía de un registro</h2>
+<h2 id="anatomia-de-un-registro">Anatomía de un registro<a class="headerlink" href="#anatomia-de-un-registro" title="Permanent link">&para;</a></h2>
 <p>Un <strong>campo</strong> se define por:</p>
 <ul>
 <li><strong>Nombre</strong> (identificador único dentro del registro)</li>
 <li><strong>Tipo</strong> (entero, real, alfanumérico, lógico, u otra estructura)</li>
 <li><strong>Tamaño</strong> (si aplica, p. ej., AN(30), N(8), etc.)</li>
 </ul>
-<h3 id="selector-de-campo">Selector de campo</h3>
+<h3 id="selector-de-campo">Selector de campo<a class="headerlink" href="#selector-de-campo" title="Permanent link">&para;</a></h3>
 <p>Se utiliza para especificar a qué campo se accede dentro del registro. En pseudocódigo lo representaremos con el <strong>punto</strong> (<code>.</code>): <code>reg.campo</code>.</p>
 <hr />
-<h2 id="tipos-de-campos">Tipos de campos</h2>
+<h2 id="tipos-de-campos">Tipos de campos<a class="headerlink" href="#tipos-de-campos" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Campos contenido</strong>: almacenan un <strong>único dato simple</strong> (p. ej., <code>edad: entero</code>).</li>
 <li><strong>Campos continente</strong>: están <strong>compuestos</strong> por otros campos (p. ej., <code>fecha</code> con <code>día/mes/año</code>; <code>telefono</code> con <code>característica/número</code>).</li>
@@ -912,22 +962,22 @@
 <p>Un <strong>campo continente</strong> puede anidarse: <code>persona.domicilio.ciudad</code>.</p>
 </blockquote>
 <hr />
-<h2 id="campos-clave">Campos clave</h2>
+<h2 id="campos-clave">Campos clave<a class="headerlink" href="#campos-clave" title="Permanent link">&para;</a></h2>
 <p>Un <strong>campo clave</strong> identifica un registro <strong>de manera única</strong> dentro de un conjunto.</p>
-<h3 id="por-formato">Por formato</h3>
+<h3 id="por-formato">Por formato<a class="headerlink" href="#por-formato" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Clave simple</strong>: formada por <strong>un solo</strong> campo contenido (p. ej., <code>dni</code>).</li>
 <li><strong>Clave compleja</strong>: formada por <strong>varios</strong> campos (usualmente continentales) p. ej., <code>fecha_vacunación = (día, mes, año)</code>.</li>
 </ul>
-<h3 id="por-funcion">Por función</h3>
+<h3 id="por-funcion">Por función<a class="headerlink" href="#por-funcion" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Clave primaria</strong>: identifica <strong>únicamente</strong> el registro (no se repite).</li>
 <li><strong>Clave foránea</strong>: referencia la <strong>clave primaria</strong> de otro conjunto de registros (relación entre entidades).</li>
 <li><strong>Clave secundaria</strong>: alternativa de acceso/ordenación que <strong>no</strong> garantiza unicidad.</li>
 </ul>
 <hr />
-<h2 id="sintaxis-pseudocodigo">Sintaxis (pseudocódigo)</h2>
-<h3 id="definicion-de-tipo-registro-y-variables">Definición de tipo registro y variables</h3>
+<h2 id="sintaxis-pseudocodigo">Sintaxis (pseudocódigo)<a class="headerlink" href="#sintaxis-pseudocodigo" title="Permanent link">&para;</a></h2>
+<h3 id="definicion-de-tipo-registro-y-variables">Definición de tipo registro y variables<a class="headerlink" href="#definicion-de-tipo-registro-y-variables" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">// Definición del tipo
 ESTUDIANTE = Registro
   dni: N(8)
@@ -940,14 +990,14 @@ FinRegistro
 // Variable de tipo registro
 alumno: ESTUDIANTE
 </code></pre>
-<h3 id="acceso-a-campos-selector">Acceso a campos (selector)</h3>
+<h3 id="acceso-a-campos-selector">Acceso a campos (selector)<a class="headerlink" href="#acceso-a-campos-selector" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">alumno.dni := 45236555
 alumno.apellido := &quot;PEREZ&quot;
 alumno.nombre := &quot;JUAN&quot;
 alumno.carrera := ISI
 alumno.ingreso := 2023
 </code></pre>
-<h3 id="campos-continente-anidacion">Campos continente (anidación)</h3>
+<h3 id="campos-continente-anidacion">Campos continente (anidación)<a class="headerlink" href="#campos-continente-anidacion" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">FECHA = Registro
   dia: 1..31
   mes: 1..12
@@ -966,8 +1016,8 @@ v.fecha_aplicacion.mes := 4
 v.fecha_aplicacion.anio := 2021
 </code></pre>
 <hr />
-<h2 id="patrones-de-uso">Patrones de uso</h2>
-<h3 id="1-carga-de-un-registro-entrada-de-datos">1) Carga de un registro (entrada de datos)</h3>
+<h2 id="patrones-de-uso">Patrones de uso<a class="headerlink" href="#patrones-de-uso" title="Permanent link">&para;</a></h2>
+<h3 id="1-carga-de-un-registro-entrada-de-datos">1) Carga de un registro (entrada de datos)<a class="headerlink" href="#1-carga-de-un-registro-entrada-de-datos" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">ACCION CargarEstudiante ES
 AMBIENTE
   est: ESTUDIANTE
@@ -980,18 +1030,18 @@ PROCESO
   // A partir de aquí, 'est' está completo y listo para ser usado
 FINACCION
 </code></pre>
-<h3 id="2-emision-salida-formateada">2) Emisión (salida formateada)</h3>
+<h3 id="2-emision-salida-formateada">2) Emisión (salida formateada)<a class="headerlink" href="#2-emision-salida-formateada" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">
 SUBACCION ImprimirEstudiante(e: ESTUDIANTE) ES
   Esc(&quot;[&quot;, e.dni, &quot;] &quot;, e.apellido, &quot;, &quot;, e.nombre, &quot; - &quot;, e.carrera, &quot; (&quot;, e.ingreso, &quot;)&quot;)
 FINSUBACCION
 </code></pre>
-<h3 id="3-actualizacion-de-campos">3) Actualización de campos</h3>
+<h3 id="3-actualizacion-de-campos">3) Actualización de campos<a class="headerlink" href="#3-actualizacion-de-campos" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">SUBACCION ActualizarIngreso(e: ESTUDIANTE; nuevo: N(4)) ES
   e.ingreso := nuevo
 FINSUBACCION
 </code></pre>
-<h3 id="4-comparacion-por-clave-primaria">4) Comparación por clave primaria</h3>
+<h3 id="4-comparacion-por-clave-primaria">4) Comparación por clave primaria<a class="headerlink" href="#4-comparacion-por-clave-primaria" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">FUNCION MismaPersona(a, b: ESTUDIANTE): logico
   devolver (a.dni = b.dni)
 FINFUNCION
@@ -1000,7 +1050,7 @@ FINFUNCION
 <p>En colecciones (listas, tablas, archivos), usá la <strong>clave primaria</strong> para búsquedas y detección de duplicados.</p>
 </blockquote>
 <hr />
-<h2 id="buenas-practicas">Buenas prácticas</h2>
+<h2 id="buenas-practicas">Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Definí primero el tipo</strong> de registro en el <em>Ambiente</em> y luego declarás variables de ese tipo.</li>
 <li>Mantené <strong>nombres claros</strong> de campos y respetá <strong>dominios</strong> (rangos/enums) para validar consistencia.</li>
@@ -1009,14 +1059,14 @@ FINFUNCION
 <li>Para campos <strong>continentales</strong>, preferí tipos explícitos (como <code>FECHA</code>) en vez de tres enteros sueltos.</li>
 </ul>
 <hr />
-<h2 id="errores-frecuentes">Errores frecuentes</h2>
+<h2 id="errores-frecuentes">Errores frecuentes<a class="headerlink" href="#errores-frecuentes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Omitir asignación de subcampos</strong> en campos continentales (p. ej., setear <code>fecha</code> sin <code>día/mes/año</code>).</li>
 <li><strong>Duplicados</strong> por ausencia de verificación de <strong>clave primaria</strong>.</li>
 <li><strong>Inconsistencias</strong> de dominio (p. ej., <code>mes = 16</code>) por no validar rangos.</li>
 </ul>
 <hr />
-<h2 id="resumen">Resumen</h2>
+<h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Un <strong>registro</strong> modela una entidad con <strong>varios campos</strong> (posiblemente anidados).</li>
 <li>Se accede a los campos con un <strong>selector</strong> (<code>reg.campo</code>).</li>
@@ -1071,7 +1121,7 @@ FINFUNCION
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.path"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>

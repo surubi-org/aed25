@@ -1,11 +1,13 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+      
+        <meta name="author" content="Chipaaco">
       
       
       
@@ -26,6 +28,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -43,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -53,7 +60,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -63,7 +77,7 @@
       
         
         <a href="#archivos" class="md-skip">
-          Skip to content
+          Saltar a contenido
         </a>
       
     </div>
@@ -77,11 +91,11 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href=".." title="AED Surubí" class="md-header__button md-logo" aria-label="AED Surubí" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -105,6 +119,42 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -120,16 +170,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -140,7 +190,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -174,12 +224,12 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="AED Surubí" class="md-nav__button md-logo" aria-label="AED Surubí" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg>
 
     </a>
     AED Surubí
@@ -384,7 +434,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -393,7 +443,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -618,7 +668,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -627,7 +677,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -803,10 +853,10 @@
 
 
 
-<h1 id="archivos">Archivos</h1>
+<h1 id="archivos">Archivos<a class="headerlink" href="#archivos" title="Permanent link">&para;</a></h1>
 <p>Esta página presenta el <strong>modelo de archivos</strong> aplicado a algoritmos: definición, organización física/lógica, modos de acceso y el <strong>conjunto de sentencias de pseudocódigo</strong> para abrir, leer, escribir y cerrar archivos. Se incluyen patrones de uso listos para reutilizar.</p>
 <hr />
-<h2 id="que-es-un-archivo">Qué es un archivo</h2>
+<h2 id="que-es-un-archivo">Qué es un archivo<a class="headerlink" href="#que-es-un-archivo" title="Permanent link">&para;</a></h2>
 <p>Un <strong>archivo</strong> es un conjunto <strong>homogéneo de registros</strong> relacionados entre sí y organizados para un propósito específico.</p>
 <ul>
 <li>Un <strong>registro</strong> está compuesto por <strong>campos</strong> (simples o compuestos).</li>
@@ -816,26 +866,26 @@
 <p>Relación jerárquica: <strong>Archivo → Registros → Campos</strong>.</p>
 </blockquote>
 <hr />
-<h2 id="organizacion-de-archivos-fisicalogica">Organización de archivos (física/lógica)</h2>
-<h3 id="secuencial">Secuencial</h3>
+<h2 id="organizacion-de-archivos-fisicalogica">Organización de archivos (física/lógica)<a class="headerlink" href="#organizacion-de-archivos-fisicalogica" title="Permanent link">&para;</a></h2>
+<h3 id="secuencial">Secuencial<a class="headerlink" href="#secuencial" title="Permanent link">&para;</a></h3>
 <p>Registros almacenados <strong>consecutivamente</strong>. Para acceder al registro <em>n</em>, es necesario pasar por los <em>n−1</em> anteriores.</p>
-<h3 id="relativa-directa">Relativa (directa)</h3>
+<h3 id="relativa-directa">Relativa (directa)<a class="headerlink" href="#relativa-directa" title="Permanent link">&para;</a></h3>
 <p>El <strong>orden físico</strong> no coincide necesariamente con el <strong>orden lógico</strong>; el acceso se realiza por <strong>posición</strong> (relativa) o por una <strong>función de direccionamiento</strong>.</p>
-<h3 id="indexada">Indexada</h3>
+<h3 id="indexada">Indexada<a class="headerlink" href="#indexada" title="Permanent link">&para;</a></h3>
 <p>Existen <strong>dos áreas</strong>:</p>
 <ul>
 <li><strong>Área de datos (primaria)</strong>: registros organizados secuencialmente por <strong>clave</strong>.</li>
 <li><strong>Área de índices</strong>: estructura auxiliar (tabla de índices) que permite <strong>localizar</strong> rápidamente por <strong>clave</strong>.</li>
 </ul>
 <hr />
-<h2 id="modos-de-acceso">Modos de acceso</h2>
+<h2 id="modos-de-acceso">Modos de acceso<a class="headerlink" href="#modos-de-acceso" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Secuencial</strong>: lectura en orden (desde el primero hasta el último).</li>
 <li><strong>Directo</strong>: salta a una posición/clave específica.</li>
 <li><strong>Mixto</strong>: combinación (p. ej., ubicar por clave y luego leer secuencialmente a partir de allí).</li>
 </ul>
 <hr />
-<h2 id="tipos-de-datos-de-apoyo-util-en-definiciones">Tipos de datos de apoyo (útil en definiciones)</h2>
+<h2 id="tipos-de-datos-de-apoyo-util-en-definiciones">Tipos de datos de apoyo (útil en definiciones)<a class="headerlink" href="#tipos-de-datos-de-apoyo-util-en-definiciones" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Tipo conjunto (enumerado)</strong></li>
 </ul>
@@ -848,7 +898,7 @@
   Edad = 0..110</code></p>
 <p>Estos tipos facilitan <strong>validar dominios</strong> al definir <strong>campos</strong> de un <strong>registro</strong>.</p>
 <hr />
-<h2 id="sentencias-de-gestion-de-archivos-pseudocodigo">Sentencias de gestión de archivos (pseudocódigo)</h2>
+<h2 id="sentencias-de-gestion-de-archivos-pseudocodigo">Sentencias de gestión de archivos (pseudocódigo)<a class="headerlink" href="#sentencias-de-gestion-de-archivos-pseudocodigo" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Convención: <code>Arch</code> es un <strong>archivo</strong>; <code>Reg</code> es una <strong>variable registro</strong> del <strong>formato</strong> del archivo.</p>
 </blockquote>
@@ -876,7 +926,7 @@
 <p>Nota: algunos modelos didácticos usan <strong><code>FDA</code></strong>; otros proveen <strong><code>NFDA</code></strong>. Elegí uno y sé consistente (o definí <code>NFDA(Arch) := NO FDA(Arch)</code>).</p>
 </blockquote>
 <hr />
-<h2 id="definiciones-en-el-ambiente">Definiciones en el <em>Ambiente</em></h2>
+<h2 id="definiciones-en-el-ambiente">Definiciones en el <em>Ambiente</em><a class="headerlink" href="#definiciones-en-el-ambiente" title="Permanent link">&para;</a></h2>
 <pre><code class="language-pseudocode">// 1) Formato del registro
 aRegistro = Registro
   url: AN(120)
@@ -893,8 +943,8 @@ datos: Archivo de aRegistro ordenado por url      // ejemplo
 ing:  aRegistro
 </code></pre>
 <hr />
-<h2 id="patrones-de-uso-snippets-reutilizables">Patrones de uso (snippets reutilizables)</h2>
-<h3 id="1-emision-listado-simple">1) Emisión (listado simple)</h3>
+<h2 id="patrones-de-uso-snippets-reutilizables">Patrones de uso (snippets reutilizables)<a class="headerlink" href="#patrones-de-uso-snippets-reutilizables" title="Permanent link">&para;</a></h2>
+<h3 id="1-emision-listado-simple">1) Emisión (listado simple)<a class="headerlink" href="#1-emision-listado-simple" title="Permanent link">&para;</a></h3>
 <p>Recorre un archivo <strong>de entrada</strong> y emite sus campos.</p>
 <pre><code class="language-pseudocode">ACCION Listar ES
 AMBIENTE
@@ -911,7 +961,7 @@ PROCESO
   CERRAR(Arch)
 FINACCION
 </code></pre>
-<h3 id="2-cargageneracion-crear-archivo-consistente">2) Carga/Generación (crear archivo consistente)</h3>
+<h3 id="2-cargageneracion-crear-archivo-consistente">2) Carga/Generación (crear archivo consistente)<a class="headerlink" href="#2-cargageneracion-crear-archivo-consistente" title="Permanent link">&para;</a></h3>
 <p>Crea un archivo nuevo y graba registros ingresados por teclado.</p>
 <pre><code class="language-pseudocode">ACCION Cargar ES
 AMBIENTE
@@ -934,7 +984,7 @@ PROCESO
   CERRAR(Nuevo)
 FINACCION
 </code></pre>
-<h3 id="3-filtro-generacion-a-partir-de-entrada">3) Filtro (generación a partir de entrada)</h3>
+<h3 id="3-filtro-generacion-a-partir-de-entrada">3) Filtro (generación a partir de entrada)<a class="headerlink" href="#3-filtro-generacion-a-partir-de-entrada" title="Permanent link">&para;</a></h3>
 <p>Lee un archivo de <strong>entrada</strong> y escribe en <strong>salida</strong> según una condición.</p>
 <pre><code class="language-pseudocode">ACCION FiltrarPorFecha ES
 AMBIENTE
@@ -956,7 +1006,7 @@ PROCESO
 
 FINACCION
 </code></pre>
-<h3 id="4-transformacion-a-multiples-salidas">4) Transformación a múltiples salidas</h3>
+<h3 id="4-transformacion-a-multiples-salidas">4) Transformación a múltiples salidas<a class="headerlink" href="#4-transformacion-a-multiples-salidas" title="Permanent link">&para;</a></h3>
 <p>Desvía los registros a dos archivos distintos.</p>
 <pre><code class="language-pseudocode">ACCION Particionar ES
 AMBIENTE
@@ -983,7 +1033,7 @@ PROCESO
 FINACCION
 </code></pre>
 <hr />
-<h2 id="buenas-practicas">Buenas prácticas</h2>
+<h2 id="buenas-practicas">Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><strong>Definí claramente</strong> el <strong>formato</strong> de registro y los <strong>dominios</strong> (rangos/enums) de cada campo.</p>
@@ -996,7 +1046,7 @@ FINACCION
 <li>Elegí el <strong>modo de organización</strong> acorde: <em>secuencial</em> (recorridos completos), <em>relativa</em> (acceso por posición), <em>indexada</em> (búsqueda por clave).</li>
 </ul>
 <hr />
-<h2 id="resumen">Resumen</h2>
+<h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Un <strong>archivo</strong> agrupa <strong>registros</strong> homogéneos y reside en <strong>memoria externa</strong>.</li>
 <li>La <strong>organización</strong> define cómo se guardan (secuencial/relativa/indexada) y el <strong>acceso</strong> cómo se leen (secuencial/directo/mixto).</li>
@@ -1050,7 +1100,7 @@ FINACCION
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.path"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>

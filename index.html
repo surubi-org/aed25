@@ -1,11 +1,13 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+      
+        <meta name="author" content="Chipaaco">
       
       
       
@@ -24,6 +26,9 @@
     
       <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
       
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -41,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -51,7 +58,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -60,8 +74,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion-a-los-algoritmos" class="md-skip">
-          Skip to content
+        <a href="#introduccion" class="md-skip">
+          Saltar a contenido
         </a>
       
     </div>
@@ -75,11 +89,11 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="." title="AED Surubí" class="md-header__button md-logo" aria-label="AED Surubí" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -103,6 +117,42 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -118,16 +168,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -138,7 +188,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -172,12 +222,12 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="AED Surubí" class="md-nav__button md-logo" aria-label="AED Surubí" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg>
 
     </a>
     AED Surubí
@@ -228,7 +278,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -237,34 +287,40 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-un-algoritmo" class="md-nav__link">
+  <a href="#definicion-de-algoritmo" class="md-nav__link">
     <span class="md-ellipsis">
-      ¿Qué es un Algoritmo?
+      Definición de Algoritmo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definición de Algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#caracteristicas-de-un-algoritmo" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#elementos" class="md-nav__link">
     <span class="md-ellipsis">
-      Características de un Algoritmo
+      Elementos
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#elementos-de-un-algoritmo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Elementos de un Algoritmo
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -628,7 +684,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -637,34 +693,40 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-un-algoritmo" class="md-nav__link">
+  <a href="#definicion-de-algoritmo" class="md-nav__link">
     <span class="md-ellipsis">
-      ¿Qué es un Algoritmo?
+      Definición de Algoritmo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definición de Algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#caracteristicas-de-un-algoritmo" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#elementos" class="md-nav__link">
     <span class="md-ellipsis">
-      Características de un Algoritmo
+      Elementos
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#elementos-de-un-algoritmo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Elementos de un Algoritmo
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -825,88 +887,75 @@
 
 
 
-<h1 id="introduccion-a-los-algoritmos">Introducción a los Algoritmos</h1>
-<p>Este documento presenta los conceptos fundamentales sobre <strong>algoritmos</strong>, sus características, elementos principales y la clasificación de datos. La estructura y estilo sigue el enfoque de documentación técnica de la <a href="https://developer.mozilla.org/">MDN Web Docs</a>.</p>
+<h1 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h1>
+<p>Supongo que el mundo de los algorítmos es grande y maravilloso... lo que también es grande y maravillosa es la fiaca que da estudiar. Con esto te debe quedar en claro que no soy el mejor estudiante, pero bueno, lo importante es que me quiero poner al día y esta página será clave en el susodicho proceso. Quedo con la idea de vomitar toda la teoría básica en este archivo, para que podamos luego avanzar en los temas.</p>
 <hr />
-<h2 id="que-es-un-algoritmo">¿Qué es un Algoritmo?</h2>
-<p>Un <strong>algoritmo</strong> es una secuencia finita de instrucciones, reglas o pasos que describen de modo preciso las operaciones que una computadora debe realizar para ejecutar una tarea en un tiempo finito【24†source】.</p>
-<p><strong>Ejemplos de algoritmos en la vida real:</strong></p>
-<ul>
-<li>Determinar en qué horario se realizan más publicaciones en enero.</li>
-<li>Calcular cuántas personas están en espera en determinado horario.</li>
-<li>Generar un ranking de los 5 países con más consultas【24†source】.</li>
-</ul>
-<hr />
-<h2 id="caracteristicas-de-un-algoritmo">Características de un Algoritmo</h2>
+<h2 id="definicion-de-algoritmo">Definición de Algoritmo<a class="headerlink" href="#definicion-de-algoritmo" title="Permanent link">&para;</a></h2>
+<p>Es una secuencia finita de instrucciones, reglas o pasos que describen de modo preciso las operaciones que una computadora debe realizar para ejecutar una tarea en un tiempo finito.</p>
+<h3 id="caracteristicas">Características<a class="headerlink" href="#caracteristicas" title="Permanent link">&para;</a></h3>
 <p>Un buen algoritmo debe ser:</p>
 <ul>
-<li>
-<p><strong>Preciso</strong>: cada paso debe estar claramente definido.</p>
-</li>
-<li>
-<p><strong>Correcto</strong>: debe resolver el problema planteado.</p>
-</li>
+<li><strong>Preciso</strong>: cada paso debe estar claramente definido.</li>
+<li><strong>Correcto</strong>: debe resolver el problema planteado.</li>
 <li><strong>Definido</strong>: el mismo conjunto de datos de entrada debe producir siempre la misma salida.</li>
-<li><strong>Finito</strong>: debe terminar en algún momento【24†source】.</li>
+<li><strong>Finito</strong>: debe terminar en algún momento.</li>
+<li><strong>independiente</strong>: de la máquina que lo ejecuta.</li>
 </ul>
-<hr />
-<h2 id="elementos-de-un-algoritmo">Elementos de un Algoritmo</h2>
-<p>Los algoritmos están compuestos por tres elementos principales【24†source】:</p>
+<h3 id="elementos">Elementos<a class="headerlink" href="#elementos" title="Permanent link">&para;</a></h3>
+<p>Los algoritmos están compuestos por tres elementos principales:</p>
 <ol>
 <li>
 <p><strong>Datos</strong></p>
-</li>
-<li>
-<p>Información de entrada o salida.</p>
-</li>
-<li>
-<p>Se clasifican en distintos tipos.</p>
+<ul>
+<li>Información de entrada o salida.</li>
+<li>Se clasifican en distintos tipos.</li>
+</ul>
 </li>
 <li>
 <p><strong>Acciones</strong></p>
-</li>
-<li>
-<p>Operaciones que transforman los datos.</p>
+<ul>
+<li>Operaciones que transforman los datos.</li>
+</ul>
 </li>
 <li>
 <p><strong>Operadores</strong></p>
-</li>
-<li>
-<p>Elementos que permiten construir expresiones o condiciones.</p>
+<ul>
+<li>Elementos que permiten construir expresiones o condiciones.</li>
+</ul>
 </li>
 </ol>
 <hr />
-<h2 id="tipos-de-datos">Tipos de Datos</h2>
+<h2 id="tipos-de-datos">Tipos de Datos<a class="headerlink" href="#tipos-de-datos" title="Permanent link">&para;</a></h2>
 <p>Los <strong>datos</strong> representan información utilizada por los algoritmos. Se dividen en:</p>
-<h3 id="simples">Simples</h3>
+<h3 id="simples">Simples<a class="headerlink" href="#simples" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Numéricos</strong>: representan cantidades o valores (ej: edad, salario).</li>
 <li><strong>Alfanuméricos</strong>: representan texto (ej: nombre, apellido). No se pueden operar matemáticamente.</li>
-<li><strong>Lógicos (booleanos)</strong>: sólo pueden tomar dos valores (Verdadero/Falso). Ejemplo: estado de un semáforo【24†source】.</li>
+<li><strong>Lógicos (booleanos)</strong>: sólo pueden tomar dos valores (Verdadero/Falso). Ejemplo: estado de un semáforo.</li>
 </ul>
-<h3 id="estructurados">Estructurados</h3>
+<h3 id="estructurados">Estructurados<a class="headerlink" href="#estructurados" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Conjuntos de datos simples agrupados.</li>
 <li>Se verán más adelante (registros, secuencias, archivos).</li>
 </ul>
 <hr />
-<h2 id="variables-y-constantes">Variables y Constantes</h2>
-<h3 id="variables">Variables</h3>
+<h2 id="variables-y-constantes">Variables y Constantes<a class="headerlink" href="#variables-y-constantes" title="Permanent link">&para;</a></h2>
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
 <p>Representan una dirección de memoria que <strong>puede cambiar durante la ejecución</strong> del algoritmo.</p>
 <pre><code class="language-pseudocode">// Ejemplo de variables
 stock := 50
 cantidad_estudiantes := 32
 </code></pre>
-<h3 id="constantes">Constantes</h3>
+<h3 id="constantes">Constantes<a class="headerlink" href="#constantes" title="Permanent link">&para;</a></h3>
 <p>Representan una dirección de memoria cuyo contenido <strong>no cambia durante la ejecución</strong>.</p>
 <pre><code class="language-pseudocode">// Ejemplo de constantes
 IVA := 0.21
 PI := 3.14159
 </code></pre>
 <hr />
-<h2 id="acciones">Acciones</h2>
-<p>Una <strong>acción</strong> es un acontecimiento que ocurre en un tiempo finito y produce un cambio de estado【24†source】.</p>
-<h3 id="tipos-de-acciones">Tipos de acciones</h3>
+<h2 id="acciones">Acciones<a class="headerlink" href="#acciones" title="Permanent link">&para;</a></h2>
+<p>Una <strong>acción</strong> es un acontecimiento que ocurre en un tiempo finito y produce un cambio de estado.</p>
+<h3 id="tipos-de-acciones">Tipos de acciones<a class="headerlink" href="#tipos-de-acciones" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Asignación</strong>: asignar un valor a una variable.</li>
 <li><strong>Condicionales</strong>: tomar decisiones según una condición.</li>
@@ -914,21 +963,21 @@ PI := 3.14159
 <li><strong>Con nombre</strong>: agrupaciones de instrucciones (subacciones, funciones, procedimientos).</li>
 </ul>
 <hr />
-<h2 id="asignacion">Asignación</h2>
-<p>La <strong>asignación</strong> reemplaza el valor anterior de una variable por un nuevo valor. Es una acción destructiva, ya que se pierde el valor previo【24†source】.</p>
-<h3 id="ejemplo-asignacion-pura">Ejemplo: Asignación Pura</h3>
+<h2 id="asignacion">Asignación<a class="headerlink" href="#asignacion" title="Permanent link">&para;</a></h2>
+<p>La <strong>asignación</strong> reemplaza el valor anterior de una variable por un nuevo valor. Es una acción destructiva, ya que se pierde el valor previo.</p>
+<h3 id="ejemplo-asignacion-pura">Ejemplo: Asignación Pura<a class="headerlink" href="#ejemplo-asignacion-pura" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">// Ejemplo de semáforo
 semaforo := &quot;Rojo&quot;
 semaforo := &quot;Verde&quot;
 semaforo := &quot;Amarillo&quot;
 </code></pre>
-<h3 id="ejemplo-asignacion-de-expresion-algebraica">Ejemplo: Asignación de Expresión Algebraica</h3>
+<h3 id="ejemplo-asignacion-de-expresion-algebraica">Ejemplo: Asignación de Expresión Algebraica<a class="headerlink" href="#ejemplo-asignacion-de-expresion-algebraica" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">descuento := importe / 2
 </code></pre>
-<h3 id="ejemplo-asignacion-de-funcion">Ejemplo: Asignación de Función</h3>
+<h3 id="ejemplo-asignacion-de-funcion">Ejemplo: Asignación de Función<a class="headerlink" href="#ejemplo-asignacion-de-funcion" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">examen := REDOND(puntaje)
 </code></pre>
-<h3 id="ejemplo-contadores-y-acumuladores">Ejemplo: Contadores y Acumuladores</h3>
+<h3 id="ejemplo-contadores-y-acumuladores">Ejemplo: Contadores y Acumuladores<a class="headerlink" href="#ejemplo-contadores-y-acumuladores" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">billetes := billetes + 1   // contador
 dinero := dinero + billete // acumulador
 </code></pre>
@@ -980,7 +1029,7 @@ dinero := dinero + billete // acumulador
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.path"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>

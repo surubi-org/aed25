@@ -1,11 +1,13 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+      
+        <meta name="author" content="Chipaaco">
       
       
       
@@ -26,6 +28,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -43,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -53,7 +60,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -63,7 +77,7 @@
       
         
         <a href="#secuencias-de-datos-elementales" class="md-skip">
-          Skip to content
+          Saltar a contenido
         </a>
       
     </div>
@@ -77,11 +91,11 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href=".." title="AED Surubí" class="md-header__button md-logo" aria-label="AED Surubí" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -105,6 +119,42 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
@@ -120,16 +170,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -140,7 +190,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -174,12 +224,12 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="AED Surubí" class="md-nav__button md-logo" aria-label="AED Surubí" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg>
 
     </a>
     AED Surubí
@@ -318,7 +368,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -327,7 +377,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -639,7 +689,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -648,7 +698,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -845,13 +895,13 @@
 
 
 
-<h1 id="secuencias-de-datos-elementales">Secuencias de Datos Elementales</h1>
+<h1 id="secuencias-de-datos-elementales">Secuencias de Datos Elementales<a class="headerlink" href="#secuencias-de-datos-elementales" title="Permanent link">&para;</a></h1>
 <p>Esta página introduce el concepto de <strong>secuencias de datos elementales</strong>, sus características, clasificación y el <strong>pseudocódigo estándar</strong> para su tratamiento (acciones predefinidas <code>ARR</code>, <code>AVZ</code>, <code>CREAR</code>, <code>ESCRIBIR</code>, <code>CERRAR</code>).</p>
 <hr />
-<h2 id="que-es-una-secuencia-de-datos-elementales">¿Qué es una Secuencia de Datos Elementales?</h2>
+<h2 id="que-es-una-secuencia-de-datos-elementales">¿Qué es una Secuencia de Datos Elementales?<a class="headerlink" href="#que-es-una-secuencia-de-datos-elementales" title="Permanent link">&para;</a></h2>
 <p>Es un <strong>conjunto de datos relacionados</strong> que se almacena en <strong>memoria externa</strong> (disco, pendrive, etc.). La secuencia presenta orden y posee un <strong>primer</strong> y <strong>último</strong> elemento; además, debe estar definido un <strong>indicador de fin de secuencia</strong>.</p>
 <hr />
-<h2 id="caracteristicas-clave">Características clave</h2>
+<h2 id="caracteristicas-clave">Características clave<a class="headerlink" href="#caracteristicas-clave" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Primer elemento</strong>: desde él se accede al resto por sucesión.</li>
 <li><strong>Relación de sucesión</strong>: cada elemento (salvo el último) precede a otro; cada elemento (salvo el primero) sucede a otro.</li>
@@ -869,25 +919,25 @@
 <li>Definida por cantidad: "primeros 4 promedios del año".</li>
 </ul>
 <hr />
-<h2 id="clasificaciones-principales">Clasificaciones principales</h2>
-<h3 id="por-contenido">Por contenido</h3>
+<h2 id="clasificaciones-principales">Clasificaciones principales<a class="headerlink" href="#clasificaciones-principales" title="Permanent link">&para;</a></h2>
+<h3 id="por-contenido">Por contenido<a class="headerlink" href="#por-contenido" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Numéricas</strong> (enteros, reales)</li>
 <li><strong>De caracteres</strong> (códigos, patentes, etc.)</li>
 <li><strong>De registros</strong> (se verá en temas posteriores)</li>
 </ul>
-<h3 id="por-cantidad-de-elementos">Por cantidad de elementos</h3>
+<h3 id="por-cantidad-de-elementos">Por cantidad de elementos<a class="headerlink" href="#por-cantidad-de-elementos" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Definidas</strong>: se conoce la cantidad (p. ej., 10 elementos).</li>
 <li><strong>Indefinidas</strong>: no se conoce la cantidad; se usa marca o condición de fin.</li>
 </ul>
-<h3 id="por-pureza">Por pureza</h3>
+<h3 id="por-pureza">Por pureza<a class="headerlink" href="#por-pureza" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Puras</strong>: todos los elementos pertenecen a la misma especie y el <strong>último</strong> se trata igual que los demás. Suelen manejarse con <strong>post-test</strong>.</li>
 <li><strong>Impuras</strong>: incluyen un <strong>elemento extraño</strong> (marca) que no se procesa; se manejan con <strong>pre-test</strong>.</li>
 </ul>
 <hr />
-<h2 id="pseudocodigo-acciones-predefinidas">Pseudocódigo: Acciones predefinidas</h2>
+<h2 id="pseudocodigo-acciones-predefinidas">Pseudocódigo: Acciones predefinidas<a class="headerlink" href="#pseudocodigo-acciones-predefinidas" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Estas acciones aseguran el <strong>acceso secuencial</strong> correcto a los elementos.</p>
 </blockquote>
@@ -898,7 +948,7 @@
 <li><code>ESCRIBIR(nombre_secuencia_salida, var)</code> → Agrega <code>var</code> a la <strong>secuencia de salida</strong> creada.</li>
 <li><code>CERRAR(nombre_secuencia)</code> → <strong>Finaliza</strong> el tratamiento de la secuencia (libera recursos / asegura persistencia).</li>
 </ul>
-<h3 id="declaracion-tipica-en-el-ambiente">Declaración típica en el Ambiente</h3>
+<h3 id="declaracion-tipica-en-el-ambiente">Declaración típica en el Ambiente<a class="headerlink" href="#declaracion-tipica-en-el-ambiente" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">ACCION Secu ES
 AMBIENTE
    sec: Secuencia de [tipo_dato]
@@ -909,8 +959,8 @@ PROCESO
 FINACCION
 </code></pre>
 <hr />
-<h2 id="esquemas-de-recorrido-patrones">Esquemas de recorrido (patrones)</h2>
-<h3 id="esquema-no1-pre-test-impura-con-marca">Esquema Nº1 — Pre-test (impura con marca)</h3>
+<h2 id="esquemas-de-recorrido-patrones">Esquemas de recorrido (patrones)<a class="headerlink" href="#esquemas-de-recorrido-patrones" title="Permanent link">&para;</a></h2>
+<h3 id="esquema-no1-pre-test-impura-con-marca">Esquema Nº1 — Pre-test (impura con marca)<a class="headerlink" href="#esquema-no1-pre-test-impura-con-marca" title="Permanent link">&para;</a></h3>
 <p>Cuenta elementos <strong>antes</strong> de tratar el FDS.</p>
 <pre><code class="language-pseudocode">
 ACCION esquema_1 ES
@@ -930,7 +980,7 @@ PROCESO
 FINACCION
 
 </code></pre>
-<h3 id="esquema-no2-post-test-pura-definida-por-marca-final">Esquema Nº2 — Post-test (pura definida por marca final)</h3>
+<h3 id="esquema-no2-post-test-pura-definida-por-marca-final">Esquema Nº2 — Post-test (pura definida por marca final)<a class="headerlink" href="#esquema-no2-post-test-pura-definida-por-marca-final" title="Permanent link">&para;</a></h3>
 <p>Procesa <strong>incluyendo</strong> el último elemento válido y <strong>termina</strong> al ver la marca.</p>
 <pre><code class="language-pseudocode">ACCION esquema_2 ES
 AMBIENTE
@@ -946,7 +996,7 @@ PROCESO
   ESCRIBIR(cont)
 FINACCION
 </code></pre>
-<h3 id="esquema-no3-definida-por-cantidad-contador-para">Esquema Nº3 — Definida por cantidad (contador <code>PARA</code>)</h3>
+<h3 id="esquema-no3-definida-por-cantidad-contador-para">Esquema Nº3 — Definida por cantidad (contador <code>PARA</code>)<a class="headerlink" href="#esquema-no3-definida-por-cantidad-contador-para" title="Permanent link">&para;</a></h3>
 <p>Lee exactamente <strong>N</strong> elementos.</p>
 <pre><code class="language-pseudocode">ACCION esquema_3 ES
 AMBIENTE
@@ -961,8 +1011,8 @@ PROCESO
 FINACCION
 </code></pre>
 <hr />
-<h2 id="ejemplos-practicos-de-tratamiento">Ejemplos prácticos de tratamiento</h2>
-<h3 id="copiar-de-una-secuencia-a-otra-indefinida-impura">Copiar de una secuencia a otra (indefinida impura)</h3>
+<h2 id="ejemplos-practicos-de-tratamiento">Ejemplos prácticos de tratamiento<a class="headerlink" href="#ejemplos-practicos-de-tratamiento" title="Permanent link">&para;</a></h2>
+<h3 id="copiar-de-una-secuencia-a-otra-indefinida-impura">Copiar de una secuencia a otra (indefinida impura)<a class="headerlink" href="#copiar-de-una-secuencia-a-otra-indefinida-impura" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">ACCION CopiarSecuencia ES
 AMBIENTE
   ent: Secuencia de caracter
@@ -979,7 +1029,7 @@ PROCESO
   CERRAR(sal)
 FINACCION
 </code></pre>
-<h3 id="contar-mayores-que-un-umbral-definida-por-cantidad">Contar mayores que un umbral (definida por cantidad)</h3>
+<h3 id="contar-mayores-que-un-umbral-definida-por-cantidad">Contar mayores que un umbral (definida por cantidad)<a class="headerlink" href="#contar-mayores-que-un-umbral-definida-por-cantidad" title="Permanent link">&para;</a></h3>
 <pre><code class="language-pseudocode">ACCION ContarMayores ES
 AMBIENTE
 
@@ -999,7 +1049,7 @@ PROCESO
 FINACCION
 </code></pre>
 <hr />
-<h2 id="buenas-practicas">Buenas prácticas</h2>
+<h2 id="buenas-practicas">Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Elegí <strong>pre-test</strong> si trabajás con <strong>marca</strong> (impura) y el elemento de fin <strong>no</strong> debe procesarse.</li>
 <li>Elegí <strong>post-test</strong> en secuencias <strong>puras</strong> para asegurar al menos una lectura y tratar por igual el último.</li>
@@ -1007,7 +1057,7 @@ FINACCION
 <li>Recordá <strong>cerrar</strong> secuencias de salida (<code>CERRAR</code>) para garantizar persistencia.</li>
 </ul>
 <hr />
-<h2 id="resumen">Resumen</h2>
+<h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Las secuencias se recorren de forma <strong>secuencial</strong> con <code>ARR</code> y <code>AVZ</code>.</li>
 <li>El <strong>fin de secuencia</strong> es imprescindible (marca o cantidad).</li>
@@ -1062,7 +1112,7 @@ FINACCION
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.path"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
