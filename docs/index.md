@@ -1,50 +1,36 @@
-# Introducción a los Algoritmos
+# Introducción
 
-Este documento presenta los conceptos fundamentales sobre **algoritmos**, sus características, elementos principales y la clasificación de datos. La estructura y estilo sigue el enfoque de documentación técnica de la [MDN Web Docs](https://developer.mozilla.org/).
-
----
-
-## ¿Qué es un Algoritmo?
-
-Un **algoritmo** es una secuencia finita de instrucciones, reglas o pasos que describen de modo preciso las operaciones que una computadora debe realizar para ejecutar una tarea en un tiempo finito【24†source】.
-
-**Ejemplos de algoritmos en la vida real:**
-
-* Determinar en qué horario se realizan más publicaciones en enero.
-* Calcular cuántas personas están en espera en determinado horario.
-* Generar un ranking de los 5 países con más consultas【24†source】.
+Supongo que el mundo de los algorítmos es grande y maravilloso... lo que también es grande y maravillosa es la fiaca que da estudiar. Con esto te debe quedar en claro que no soy el mejor estudiante, pero bueno, lo importante es que me quiero poner al día y esta página será clave en el susodicho proceso. Quedo con la idea de vomitar toda la teoría básica en este archivo, para que podamos luego avanzar en los temas.
 
 ---
 
-## Características de un Algoritmo
+## Definición de Algoritmo
+
+Es una secuencia finita de instrucciones, reglas o pasos que describen de modo preciso las operaciones que una computadora debe realizar para ejecutar una tarea en un tiempo finito.
+
+### Características
 
 Un buen algoritmo debe ser:
 
 * **Preciso**: cada paso debe estar claramente definido.
-
 * **Correcto**: debe resolver el problema planteado.
 * **Definido**: el mismo conjunto de datos de entrada debe producir siempre la misma salida.
-* **Finito**: debe terminar en algún momento【24†source】.
+* **Finito**: debe terminar en algún momento.
+* **independiente**: de la máquina que lo ejecuta.
 
----
+### Elementos
 
-## Elementos de un Algoritmo
-
-Los algoritmos están compuestos por tres elementos principales【24†source】:
+Los algoritmos están compuestos por tres elementos principales:
 
 1. **Datos**
-
-   * Información de entrada o salida.
-   * Se clasifican en distintos tipos.
+    * Información de entrada o salida.
+    * Se clasifican en distintos tipos.
 
 2. **Acciones**
-
-
-   * Operaciones que transforman los datos.
+    * Operaciones que transforman los datos.
 
 3. **Operadores**
-
-   * Elementos que permiten construir expresiones o condiciones.
+    * Elementos que permiten construir expresiones o condiciones.
 
 ---
 
@@ -57,7 +43,7 @@ Los **datos** representan información utilizada por los algoritmos. Se dividen 
 
 * **Numéricos**: representan cantidades o valores (ej: edad, salario).
 * **Alfanuméricos**: representan texto (ej: nombre, apellido). No se pueden operar matemáticamente.
-* **Lógicos (booleanos)**: sólo pueden tomar dos valores (Verdadero/Falso). Ejemplo: estado de un semáforo【24†source】.
+* **Lógicos (booleanos)**: sólo pueden tomar dos valores (Verdadero/Falso). Ejemplo: estado de un semáforo.
 
 ### Estructurados
 
@@ -93,7 +79,7 @@ PI := 3.14159
 
 ## Acciones
 
-Una **acción** es un acontecimiento que ocurre en un tiempo finito y produce un cambio de estado【24†source】.
+Una **acción** es un acontecimiento que ocurre en un tiempo finito y produce un cambio de estado.
 
 ### Tipos de acciones
 
@@ -106,7 +92,7 @@ Una **acción** es un acontecimiento que ocurre en un tiempo finito y produce un
 
 ## Asignación
 
-La **asignación** reemplaza el valor anterior de una variable por un nuevo valor. Es una acción destructiva, ya que se pierde el valor previo【24†source】.
+La **asignación** reemplaza el valor anterior de una variable por un nuevo valor. Es una acción destructiva, ya que se pierde el valor previo.
 
 ### Ejemplo: Asignación Pura
 
